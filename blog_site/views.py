@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
+from .profiles import UserProfiile
 
 
 class PostList(generic.ListView):
@@ -79,4 +80,12 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+class UserInfoHistory(View):
+
+    def get(self, request, *args, **kwargs):
+        profile = request.user.userprofile
+        context = {
+            'profile': profile,
+        }
+        return render(request, 'user_profile.html', context)
 
