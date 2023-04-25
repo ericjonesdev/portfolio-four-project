@@ -83,8 +83,8 @@ class PostLike(View):
 class UserInfoHistory(View):
 
     def get(self, request, *args, **kwargs):
-        profile = UserProfiile.objects.filter(first_name='Eric')
-        print(profile.user)
+        profile = UserProfiile.objects.all()
+        print(profile)
         context = {
             'profile': profile,
         }
