@@ -22,17 +22,16 @@ class UserProfiile(models.Model):
     def __str__(self):
         return self.user.username
 
-
     def user_profile(request):
         return render("user_profile.html")
 
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
-
     if created:
         UserProfiile.objects.create(user=instance)
     # Existing users: just save the profile
-    instance.userprofile.save()
-
-
+    try:
+        instance.userprofiile.save()
+    except UserProfiile.DoesNotExist:
+        pass
