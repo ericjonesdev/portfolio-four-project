@@ -1,15 +1,26 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy
+from django.contrib.auth import get_user_model
 from django.views.generic.edit import DeleteView
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, UserProfiile
 from .forms import CommentForm, UserProfileForm
-from django.views.generic.detail import DetailView
+from django.views.generic import DetailView, UpdateView
 from django.utils.decorators import method_decorator
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+
+User = get_user_model()
+
+
+class UserProfileView(DetailView):
+    model = User
+    template_name = 'user_profile.html'
+    context_object_name = 'user'
+    slug_field = 'username'
+    slug_url_kwarg = 'username'
 
 
 class PostList(generic.ListView):
@@ -105,19 +116,18 @@ class UserProfiileDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView
         return context
 
 
-class UserProfiileUpdateView(LoginRequiredMixin, UserPassesTestMixin, generic.edit.UpdateView):
+class UserProfiileUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = UserProfiile
-    form_class = UserProfileForm
     template_name = 'update_profile.html'
-    success_url = '/user_profile'
-
+    fields = ['profile_image', 'first_name', 'last_name', 'bio', 'dob', 'location', 'github', 'website', 'twitter', 'occupation']
+    success_url = '/'
+    
     def test_func(self):
-        user_profile = self.get_object()
-        return self.request.user == user_profile.user
+        return self.get_object().user == self.request.user
 
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+    def get_object(self, queryset=None):
+        obj, created = UserProfiile.objects.get_or_create(user=self.request.user)
+        return obj
    
 
 class UserProfiileDeleteView(LoginRequiredMixin, DeleteView):

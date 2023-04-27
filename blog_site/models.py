@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 from django.shortcuts import render
+from django import forms
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from cloudinary.models import CloudinaryField
@@ -53,7 +54,7 @@ class UserProfiile(models.Model):
     first_name = models.TextField(null=True, blank=True)
     last_name = models.TextField(null=True, blank=True)
     bio = models.TextField(null=True, blank=True)
-    dob = models.DateField(null=True, blank=True)
+    dob = models.DateField(blank=True, null=True)
     location = models.CharField(max_length=50, null=True, blank=True)
     github = models.URLField(null=True, blank=True)
     website = models.URLField(null=True, blank=True)

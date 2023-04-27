@@ -1,25 +1,36 @@
 {% extends 'base.html' %}
-
+{% load crispy_forms_tags %}
 {% block content %}
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+      <h1>User profile page for {{ user }}</h1>
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="form-group">
+          <legend class="border-bottom mb-4">Profile information</legend>
 
-    <h1>User profile page for {{ object.username }}</h1>
-
-    <p>Bio: {{ profile.bio }}</p>
-    <p>Date of birth: {{ profile.dob }}</p>
-    <p>First name: {{ profile.first_name }}</p>
-    <p>Last name: {{ profile.last_name }}</p>
-    <p>Website: {{ profile.website }}</p>
-    <p>location: {{ profile.location }}</p>
-    <p>github: {{ profile.github }}</p>
-    <p>occupation: {{ profile.occupation }}</p>
-
+          {{ form|crispy }}
+          
+        </fieldset>
+        <div class="form-group">
+          <button class="btn btn-outline-info" type="submit">Save</button>
         </div>
+      </form>
     </div>
+  </div>
 </div>
 
+{% endblock %}
 
+{% block scripts %}
+  {{ block.super }}
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#id_dob').mask('0000-00-00');
+    });
+  </script>
 {% endblock %}
