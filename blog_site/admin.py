@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comment, UserProfiile
 from django_summernote.admin import SummernoteModelAdmin
-from .profiles import UserProfiile
+
 
 
 @admin.register(Post)

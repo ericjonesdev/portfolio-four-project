@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>User profile page for  {{ user }}</h1>
+
+
+<div class="row">
+    <div class="cold-md-8">
+        <div class="card card-body">
+
+            {% for x in user_profile %}
+
+            {{x.user }}
+            {{x.profile_image }}
+            {{x.first_name }}
+            {{x.last_name }}
+            {{x.bio }}
+            {{x.dob }}
+            {{x.location }}
+            {{x.github }}
+            {{x.website }}
+            {{x.twitter }}
+            {{x.occupation }}
+
+            {% endfor %}
+            <table class="table table-md">
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+            
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+
+                </tr>
+                
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock content %}

@@ -1,9 +1,13 @@
 from django.shortcuts import render, get_object_or_404, reverse
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Post, UserProfiile
 from .forms import CommentForm
-from .profiles import UserProfiile
+from django.views.generic.detail import DetailView
+from django.utils.decorators import method_decorator
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 
 class PostList(generic.ListView):
@@ -80,14 +84,20 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-class UserInfoHistory(View):
+class UserProfiileDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
+    model = User
+    template_name = 'user_profile.html'
+    slug_field = 'username'
 
-    def get(self, request, *args, **kwargs):
-        profile = UserProfiile.objects.all()
-        print(profile)
-        context = {
-            'profile': profile,
-        }
-        print('This printed')
-        return render(request, 'user_profile.html', context)
+    def test_func(self):
+        user = self.get_object()
+        return self.request.user == user
 
+    def get_object(self, queryset=None):
+        return get_object_or_404(User, username=self.kwargs['username'])
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user_profiile = get_object_or_404(UserProfiile, user=self.object)
+        context['profile'] = user_profiile
+        return context

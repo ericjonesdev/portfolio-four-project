@@ -46,7 +46,7 @@
                           {{user.username}}
                         </button>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                          <li><a class="dropdown-item active" href="{% url 'user_profile' user.username %}">
+                          <li><a class="dropdown-item active" href="{% url 'user_profile' username=user.username %}">
                             {{user.first_name}}{{user.last_name}}</a><br> @{{ user.username}}
                           </li>
                           <li><hr class="dropdown-divider"></li>
