@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.urls import reverse_lazy
+from django.views.generic.edit import DeleteView
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, UserProfiile
@@ -117,3 +119,12 @@ class UserProfiileUpdateView(LoginRequiredMixin, UserPassesTestMixin, generic.ed
         form.instance.user = self.request.user
         return super().form_valid(form)
    
+
+class UserProfiileDeleteView(LoginRequiredMixin, DeleteView):
+    model = UserProfiile
+    success_url = reverse_lazy('home')
+    template_name = 'userprofile_confirm_delete.html'
+
+    def get_object(self, queryset=None):
+        obj = get_object_or_404(UserProfile, user=self.request.user)
+        return obj

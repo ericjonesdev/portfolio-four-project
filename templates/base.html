@@ -53,8 +53,8 @@
                             @{{ user.username}}
                           </li>
                           <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="{% url 'update_profile' pk=user.id %}">Update Profile</a></li>
-                          <li><a class="dropdown-item" href="#">Delete Profile</a></li>
+                          <li><a class="dropdown-item" href="{% url 'update_profile' username=user.username %}">Update Profile</a></li>
+                          <li><a class="dropdown-item" href="{% url 'delete_profile' username=user.username %}">Delete Profile</a></li>
                           <li><hr class="dropdown-divider"></li>
                           <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
                         </ul>
