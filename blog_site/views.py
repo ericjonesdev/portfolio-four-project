@@ -2,12 +2,13 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy
 from django.contrib.auth import get_user_model
+from django.contrib import messages
 from django.views.generic.edit import DeleteView
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, UserProfiile
 from .forms import CommentForm, UserProfileForm
-from django.views.generic import DetailView, UpdateView
+from django.views.generic import DetailView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
@@ -133,8 +134,16 @@ class UserProfiileUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView
 class UserProfiileDeleteView(LoginRequiredMixin, DeleteView):
     model = UserProfiile
     success_url = reverse_lazy('home')
-    template_name = 'userprofile_confirm_delete.html'
 
     def get_object(self, queryset=None):
-        obj = get_object_or_404(UserProfile, user=self.request.user)
+        obj = super(UserProfiileDeleteView, self).get_object()
+        print(obj) 
+        if not obj.user == self.request.user:
+            raise Http404
         return obj
+
+    def get_context_data(self, **kwargs):
+        context = super(UserProfiileDeleteView, self).get_context_data(**kwargs)
+        context['title'] = 'Delete Profile'
+        return context
+
