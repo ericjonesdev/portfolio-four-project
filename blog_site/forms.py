@@ -1,4 +1,4 @@
-from .models import Comment, Post
+from .models import Comment, Post, UserProfiile(
 from django import forms
 
 
@@ -8,7 +8,7 @@ class CommentForm(forms.ModelForm):
         fields = ('body',)
         
 
-# class PostForm(forms.ModelForm):
-#     class Meta:
-#         model = Post
-#         fields =  user.Meta.get_fields(include_parents=True, include_hidden=False)
+class UserProfileForm(forms.ModelForm):
+    class Meta:
+        model = UserProfiile
+        fields = ['profile_image', 'first_name', 'Last_name', 'bio', 'dob', 'location', 'github', 'website', 'twitter', 'occupation']

@@ -1,9 +1,9 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, UserProfiile
-from .forms import CommentForm
+from .forms import CommentForm, UserProfileForm
 from django.views.generic.detail import DetailView
 from django.utils.decorators import method_decorator
 from django.contrib.auth.models import User
@@ -101,3 +101,19 @@ class UserProfiileDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView
         user_profiile = get_object_or_404(UserProfiile, user=self.object)
         context['profile'] = user_profiile
         return context
+
+
+class UserProfiileUpdateView(LoginRequiredMixin, UserPassesTestMixin, generic.edit.UpdateView):
+    model = UserProfiile
+    form_class = UserProfileForm
+    template_name = 'update_profile.html'
+    success_url = '/user_profile'
+
+    def test_func(self):
+        user_profile = self.get_object()
+        return self.request.user == user_profile.user
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+   
