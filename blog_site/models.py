@@ -54,11 +54,11 @@ class UserProfiile(models.Model):
     first_name = models.TextField(null=True, blank=True)
     last_name = models.TextField(null=True, blank=True)
     bio = models.TextField(null=True, blank=True)
-    dob = models.DateField(blank=True, null=True)
+    dob = models.DateField(help_text='date form:YYYY-MM-DD', blank=True, null=True,)
     location = models.CharField(max_length=50, null=True, blank=True)
-    github = models.URLField(null=True, blank=True)
+    github = models.TextField(null=True, blank=True)
     website = models.URLField(null=True, blank=True)
-    twitter = models.URLField(null=True, blank=True)
+    twitter = models.TextField(null=True, blank=True)
     occupation = models.TextField(null=True, blank=True)
 
     def __str__(self):
