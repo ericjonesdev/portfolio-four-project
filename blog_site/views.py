@@ -11,6 +11,7 @@ from .forms import CommentForm, UserProfileForm
 from django.views.generic import DetailView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 from django.contrib.auth.models import User
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 
 User = get_user_model()
@@ -131,18 +132,8 @@ class UserProfiileUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView
         return obj
    
 
-class UserProfiileDeleteView(LoginRequiredMixin, DeleteView):
-    model = UserProfiile
+class UserProfiileDeleteView(SuccessMessageMixin, generic.DeleteView):
+    model = User
+    template = 'delete_profile.html'
+    success_message = "User has been deleted!"
     success_url = reverse_lazy('home')
-
-    def get_object(self, queryset=None):
-        obj = super(UserProfiileDeleteView, self).get_object()
-        print(obj) 
-        if not obj.user == self.request.user:
-            raise Http404
-        return obj
-
-    def get_context_data(self, **kwargs):
-        context = super(UserProfiileDeleteView, self).get_context_data(**kwargs)
-        context['title'] = 'Delete Profile'
-        return context 
