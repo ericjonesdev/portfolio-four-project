@@ -10,11 +10,11 @@
                 </div>
                 <div class="card-body">
                     <p>Are you sure you want to delete your profile?</p>
-                    <form action="{% url 'delete_profile' user.id %}" method="POST">
+                    <form action="{% url 'delete_profile' user_pk %}" method="POST">
                         {% csrf_token %}
                         <input type="hidden" name="next" value="{{ next }}">
                         <button type="submit" class="btn btn-danger">Yes, delete my profile</button>
-                        <a href="{% url 'user_profile' user.id %}" class="btn btn-secondary">Cancel</a>
+                        <a href="{% url 'user_profile' user_pk %}" class="btn btn-secondary">Cancel</a>
                     </form>
                 </div>
             </div>

@@ -6,6 +6,7 @@ from django import forms
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from cloudinary.models import CloudinaryField
+from django.contrib.auth.decorators import login_required
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -77,3 +78,24 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         instance.userprofiile.save()
     except UserProfiile.DoesNotExist:
         pass
+
+
+class UserBlogPost(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_blog_posts')
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    content = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    status = models.IntegerField(choices=STATUS, default=0)
+    likes = models.ManyToManyField(User, related_name='blog_post_likes', blank=True)
+
+    class Meta:
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return self.title
+
+    def number_of_likes(self):
+        return self.likes.count()
+

@@ -6,9 +6,9 @@ from django.contrib import messages
 from django.views.generic.edit import DeleteView
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post, UserProfiile
-from .forms import CommentForm, UserProfileForm
-from django.views.generic import DetailView, UpdateView, DeleteView
+from .models import Post, UserProfiile, UserBlogPost
+from .forms import CommentForm, UserProfileForm, PostForm
+from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 from django.contrib.auth.models import User
 from django.contrib.messages.views import SuccessMessageMixin
@@ -102,20 +102,22 @@ class PostLike(View):
 class UserProfiileDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
     model = User
     template_name = 'user_profile.html'
-    slug_field = 'username'
+    slug_field = 'pk'
 
     def test_func(self):
         user = self.get_object()
         return self.request.user == user
 
     def get_object(self, queryset=None):
-        return get_object_or_404(User, username=self.kwargs['username'])
+        return get_object_or_404(User, pk=self.kwargs['user_pk'])
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        user_profiile = get_object_or_404(UserProfiile, user=self.object)
-        context['profile'] = user_profiile
+        user_profile = get_object_or_404(UserProfiile, user=self.object)
+        context['profile'] = user_profile
+        context['user_pk'] = self.object.pk
         return context
+
 
 
 class UserProfiileUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -137,3 +139,47 @@ class UserProfiileDeleteView(SuccessMessageMixin, generic.DeleteView):
     template = 'delete_profile.html'
     success_message = "User has been deleted!"
     success_url = reverse_lazy('home')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['user'] = self.get_object()
+        return context
+
+    def get_object(self, queryset=None):
+        obj = super().get_object()
+        print(obj)
+        return obj
+
+
+@method_decorator(login_required, name='dispatch')
+class UserBlogPostCreateView(LoginRequiredMixin, CreateView):
+    model = UserBlogPost
+    fields = ['title', 'slug', 'content', 'status']
+    template_name = 'create_post.html'
+    success_url = reverse_lazy('user_post_list')
+    
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+        
+    def create_post(request):
+        if request.method == 'POST':
+            form = PostForm(request.POST, request.FILES)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.author = request.user
+                post.save()
+                return redirect('post_detail', slug=post.slug)
+        else:
+            form = PostForm()
+        return render(request, 'create_post.html', {'form': form})
+
+
+class UserBlogPostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = UserBlogPost
+    fields = ['title', 'slug', 'content', 'status']
+    
+    def test_func(self):
+        blog_post = self.get_object()
+        return blog_post.author == self.request.user
+
