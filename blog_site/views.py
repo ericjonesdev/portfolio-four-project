@@ -6,13 +6,15 @@ from django.contrib import messages
 from django.views.generic.edit import DeleteView
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post, UserProfiile, UserBlogPost
+from .models import Post, UserProfiile
 from .forms import CommentForm, UserProfileForm, PostForm
 from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 from django.contrib.auth.models import User
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
+from django.views.generic import ListView
+
 
 User = get_user_model()
 
@@ -119,7 +121,6 @@ class UserProfiileDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView
         return context
 
 
-
 class UserProfiileUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = UserProfiile
     template_name = 'update_profile.html'
@@ -152,34 +153,71 @@ class UserProfiileDeleteView(SuccessMessageMixin, generic.DeleteView):
 
 
 @method_decorator(login_required, name='dispatch')
-class UserBlogPostCreateView(LoginRequiredMixin, CreateView):
-    model = UserBlogPost
-    fields = ['title', 'slug', 'content', 'status']
+class UserBlogPostCreateView(CreateView):
+    model = Post
+    form_class = PostForm
     template_name = 'create_post.html'
     success_url = reverse_lazy('user_post_list')
-    
+
     def form_valid(self, form):
         form.instance.author = self.request.user
-        return super().form_valid(form)
+        response = super().form_valid(form)
+        post_url = reverse('post_detail', args=[self.object.slug])
+        print(f"New post URL: {post_url}")
+        return response
+
+    def get_success_url(self):
+        return reverse_lazy('user_post_list')
+
         
-    def create_post(request):
-        if request.method == 'POST':
-            form = PostForm(request.POST, request.FILES)
-            if form.is_valid():
-                post = form.save(commit=False)
-                post.author = request.user
-                post.save()
-                return redirect('post_detail', slug=post.slug)
-        else:
-            form = PostForm()
-        return render(request, 'create_post.html', {'form': form})
-
-
 class UserBlogPostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    model = UserBlogPost
+    model = Post
     fields = ['title', 'slug', 'content', 'status']
     
     def test_func(self):
         blog_post = self.get_object()
         return blog_post.author == self.request.user
 
+
+class PostListView(generic.ListView):
+    model = Post
+    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    template_name = 'post_list.html'
+    context_object_name = 'posts'
+    paginate_by = 6
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Blog Posts'
+        return context
+
+
+# class UserBlogPostListView(ListView):
+#     model = Post
+#     template_name = 'user_post_list.html'
+#     context_object_name = 'posts'
+
+#     def get_queryset(self):
+#         user = self.request.user
+#         return UserBlogPost.objects.filter(author=user)
+    
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         print(context['posts']) 
+#         return context
+
+class UserBlogPostListView(ListView):
+    model = Post
+    template_name = 'user_post_list.html'
+    context_object_name = 'posts'
+    paginate_by = 5
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(author=self.request.user)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if not context['posts']:
+            context['message'] = 'You have not created any posts yet.'
+        return context
