@@ -13,8 +13,8 @@ from django.contrib.auth.decorators import login_required
 class Post(models.Model):
 
     STATUS_CHOICES = (
-        ('draft', 'Draft'),
-        ('published', 'Published'),
+        ('Draft', 'Draft'),
+        ('Published', 'Published'),
     )
 
     title = models.CharField(max_length=200, unique=True)

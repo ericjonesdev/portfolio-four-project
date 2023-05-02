@@ -7,7 +7,7 @@
             <div class="card shadow">
                 <div class="card-header bg-danger text-white">
                     <div class="post-list">
-                        {% for post in post_list %}
+                        {% for post in page_obj %}
                         <div class="post">
                             <h2><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h2>
                             <p class="meta">{{ post.created_on|date:"M d, Y" }}</p>

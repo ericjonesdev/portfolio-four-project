@@ -201,7 +201,7 @@ class PostListView(generic.ListView):
 class UserBlogPostListView(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'post_list.html'
-    context_object_name = 'posts'
+    context_object_name = 'post_list'
     paginate_by = 5
 
     def get_queryset(self):
@@ -217,8 +217,8 @@ class UserBlogPostListView(LoginRequiredMixin, ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        if not context['posts']:
+        if not context['post_list']:
             context['message'] = 'You have not created any posts yet.'
         return context
-        
+
     
