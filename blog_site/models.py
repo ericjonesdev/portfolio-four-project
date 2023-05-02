@@ -9,10 +9,14 @@ from cloudinary.models import CloudinaryField
 from django.contrib.auth.decorators import login_required
 
 
-STATUS = ((0, "Draft"), (1, "Published"))
-
 
 class Post(models.Model):
+
+    STATUS_CHOICES = (
+        ('draft', 'Draft'),
+        ('published', 'Published'),
+    )
+
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
@@ -21,9 +25,9 @@ class Post(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-
+    
     class Meta:
         ordering = ['-created_on']
 

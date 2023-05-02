@@ -15,6 +15,13 @@ class UserProfileForm(forms.ModelForm):
 
 
 class PostForm(forms.ModelForm):
+    status = forms.ChoiceField(choices=(('Draft', 'Draft'), ('Published', 'Published')), widget=forms.RadioSelect())
+
     class Meta:
         model = Post
-        fields = ('title', 'slug', 'author', 'content', 'featured_image')
+        fields = ('title', 'slug', 'content', 'featured_image', 'status')
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'content': forms.Textarea(attrs={'class': 'form-control'}),
+            'status': forms.Select(attrs={'class': 'form-control'}),
+        }

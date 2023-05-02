@@ -161,13 +161,19 @@ class UserBlogPostCreateView(CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        print(form.cleaned_data['status'])
+        form.instance.status = form.cleaned_data['status']
         response = super().form_valid(form)
         post_url = reverse('post_detail', args=[self.object.slug])
-        print(f"New post URL: {post_url}")
         return response
 
     def get_success_url(self):
         return reverse_lazy('post_list')
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        return kwargs
+
 
         
 class UserBlogPostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -200,7 +206,13 @@ class UserBlogPostListView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        queryset = queryset.filter(author=self.request.user).order_by('-created_on')
+        queryset = queryset.filter(author=self.request.user)
+        status = self.request.GET.get('status')
+        if status == 'draft':
+            queryset = queryset.filter(status='draft')
+        else:
+            queryset = queryset.filter(status='published')
+        queryset = queryset.order_by('-created_on')
         return queryset
 
     def get_context_data(self, **kwargs):
