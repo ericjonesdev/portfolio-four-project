@@ -157,7 +157,7 @@ class UserBlogPostCreateView(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'create_post.html'
-    success_url = reverse_lazy('user_post_list')
+    success_url = reverse_lazy('post_list')
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -167,7 +167,7 @@ class UserBlogPostCreateView(CreateView):
         return response
 
     def get_success_url(self):
-        return reverse_lazy('user_post_list')
+        return reverse_lazy('post_list')
 
         
 class UserBlogPostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -192,32 +192,21 @@ class PostListView(generic.ListView):
         return context
 
 
-# class UserBlogPostListView(ListView):
-#     model = Post
-#     template_name = 'user_post_list.html'
-#     context_object_name = 'posts'
-
-#     def get_queryset(self):
-#         user = self.request.user
-#         return UserBlogPost.objects.filter(author=user)
-    
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         print(context['posts']) 
-#         return context
-
-class UserBlogPostListView(ListView):
+class UserBlogPostListView(LoginRequiredMixin, ListView):
     model = Post
-    template_name = 'user_post_list.html'
+    template_name = 'post_list.html'
     context_object_name = 'posts'
     paginate_by = 5
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        return queryset.filter(author=self.request.user)
+        queryset = queryset.filter(author=self.request.user).order_by('-created_on')
+        return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         if not context['posts']:
             context['message'] = 'You have not created any posts yet.'
         return context
+        
+    
