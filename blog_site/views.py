@@ -161,11 +161,9 @@ class UserBlogPostCreateView(CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        print(form.cleaned_data['status'])
         form.instance.status = form.cleaned_data['status']
-        response = super().form_valid(form)
-        post_url = reverse('post_detail', args=[self.object.slug])
-        return response
+        return super().form_valid(form)
+
 
     def get_success_url(self):
         return reverse_lazy('post_list')
@@ -175,7 +173,6 @@ class UserBlogPostCreateView(CreateView):
         return kwargs
 
 
-        
 class UserBlogPostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
     fields = ['title', 'slug', 'content', 'status']
@@ -201,7 +198,7 @@ class PostListView(generic.ListView):
 class UserBlogPostListView(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'post_list.html'
-    context_object_name = 'post_list'
+    context_object_name = 'posts'
     paginate_by = 5
 
     def get_queryset(self):
@@ -217,7 +214,7 @@ class UserBlogPostListView(LoginRequiredMixin, ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        if not context['post_list']:
+        if not context['posts']:
             context['message'] = 'You have not created any posts yet.'
         return context
 
