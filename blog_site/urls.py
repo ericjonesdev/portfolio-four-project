@@ -8,6 +8,7 @@ from .views import UserProfiileDetailView, UserProfiileUpdateView, UserProfiileD
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
+    path('about.html', views.about, name='about'),
     path('create_post/', views.UserBlogPostCreateView.as_view(), name='create_post'),
     path('post_list/', views.UserBlogPostListView.as_view(), name='post_list'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),

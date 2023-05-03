@@ -57,7 +57,7 @@ class PostDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status=1)
+        queryset = Post.objects.filter(status='Published')
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("created_on")
         liked = False
@@ -218,4 +218,5 @@ class UserBlogPostListView(LoginRequiredMixin, ListView):
             context['message'] = 'You have not created any posts yet.'
         return context
 
-    
+def about(request):
+    return render(request, 'about.html', {})
