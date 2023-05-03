@@ -206,9 +206,9 @@ class UserBlogPostListView(LoginRequiredMixin, ListView):
         queryset = queryset.filter(author=self.request.user)
         status = self.request.GET.get('status')
         if status == 'draft':
-            queryset = queryset.filter(status='draft')
+            queryset = queryset.filter(status='Draft')
         else:
-            queryset = queryset.filter(status='published')
+            queryset = queryset.filter(status='Published')
         queryset = queryset.order_by('-created_on')
         return queryset
 

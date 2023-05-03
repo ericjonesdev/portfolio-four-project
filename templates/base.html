@@ -58,6 +58,7 @@
                           <li><a class="dropdown-item" href="{% url 'update_profile' username=user.username %}">Update Profile</a></li>
                           <li><a class="dropdown-item" href="{% url 'delete_profile' user.id %}">Delete Profile</a></li>
                           <li><a class="dropdown-item" href="{% url 'create_post' %}">Create Post</a></li>
+                          <li><a class="dropdown-item" href="{% url 'post_list' %}">Posts</a></li>
                           <li><hr class="dropdown-divider"></li>
                           <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                         </ul>
