@@ -20,6 +20,9 @@ User = get_user_model()
 
 
 class UserProfileView(DetailView):
+    '''
+    maps UserProfileView to the urls.py and html template 
+    '''
     model = User
     template_name = 'user_profile.html'
     context_object_name = 'user'
@@ -28,6 +31,10 @@ class UserProfileView(DetailView):
 
 
 class PostList(generic.ListView):
+    '''
+    uses post model to filter post by those published and displays them
+    on the homepage 
+    '''
     model = Post
     queryset = Post.objects.filter(status='Published').order_by('-created_on')
     template_name = 'index.html'
@@ -35,6 +42,10 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
+    '''
+    defines a Django View to display a blog post with comments and handles adding new comments to the post.
+    adds logic to filter if user is valid and pulls new comment information to add to the post.
+    '''
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status='Published')
@@ -89,6 +100,9 @@ class PostDetail(View):
 
 
 class PostLike(View):
+    '''
+    adds functionality to toggle the likes on a given post
+    '''
 
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
@@ -102,6 +116,12 @@ class PostLike(View):
 
 
 class UserProfiileDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
+    '''
+    defines a detail view for user profiles, requiring login and user ownership via the
+    LoginRequiredMixin UserPassesTestMixin. It gets the user object based on the URL 
+    parameter user_pk, fetches the corresponding UserProfiile object and adds it to the 
+    context for rendering the user_profile.html template.    
+    '''
     model = User
     template_name = 'user_profile.html'
     slug_field = 'pk'
@@ -122,6 +142,10 @@ class UserProfiileDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView
 
 
 class UserProfiileUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    '''
+    uses the UserProfiile model to provide the editable fields to the user profile view.
+    ensures that the user is the currently logged in user.
+    '''
     model = UserProfiile
     template_name = 'update_profile.html'
     fields = ['profile_image', 'first_name', 'last_name', 'bio', 'dob', 'location', 'github', 'website', 'twitter', 'occupation']
@@ -136,6 +160,11 @@ class UserProfiileUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView
    
 
 class UserProfiileDeleteView(SuccessMessageMixin, generic.DeleteView):
+    '''
+    uses the User model to provide the relationship need to get_context_data
+    and provide the user object to be deleted
+    '''
+    
     model = User
     template = 'delete_profile.html'
     success_message = "User has been deleted!"
@@ -154,6 +183,11 @@ class UserProfiileDeleteView(SuccessMessageMixin, generic.DeleteView):
 
 @method_decorator(login_required, name='dispatch')
 class UserBlogPostCreateView(CreateView):
+    '''
+    uses the Post model and PostForm classes to allow a logged in user to 
+    create a new post. Upon successful completion of a post, the user is then 
+    taken to their unique listing of published posts.
+    '''
     model = Post
     form_class = PostForm
     template_name = 'create_post.html'
@@ -174,6 +208,9 @@ class UserBlogPostCreateView(CreateView):
 
 
 class UserBlogPostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    '''
+    future functionality **see readme.md
+    '''
     model = Post
     fields = ['title', 'slug', 'content', 'status']
     
@@ -183,6 +220,10 @@ class UserBlogPostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView
 
 
 class PostListView(generic.ListView):
+    '''
+    uses the post model and is filtered on the created_on criteria.
+    returns the context for listing on post_list.html
+    '''
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'post_list.html'
@@ -196,6 +237,10 @@ class PostListView(generic.ListView):
 
 
 class UserBlogPostListView(LoginRequiredMixin, ListView):
+    '''
+    uses the post model and is filtered on the Draft or Published criteria.
+    returns the context for listing on post_list.html
+    '''
     model = Post
     template_name = 'post_list.html'
     context_object_name = 'posts'
@@ -219,4 +264,5 @@ class UserBlogPostListView(LoginRequiredMixin, ListView):
         return context
 
 def about(request):
+    # renders the about page
     return render(request, 'about.html', {})
