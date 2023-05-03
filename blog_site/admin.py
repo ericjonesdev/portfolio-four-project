@@ -6,7 +6,9 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
-
+    '''
+    Administrative function to allow site admin to display, list and filter posts.
+    '''
     prepopulated_fields = {'slug': ('title',)}
     list_filter = ('status', 'created_on')
     list_display = ('title', 'author', 'slug', 'status', 'created_on')
@@ -16,6 +18,10 @@ class PostAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
+    '''
+    Administrative function to allow site admin to display, list, approve and 
+    filter comments.
+    '''
 
     list_display = ('name', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
@@ -27,6 +33,10 @@ class CommentAdmin(admin.ModelAdmin):
 
 @admin.register(UserProfiile)
 class UserProfileAdmin(admin.ModelAdmin):
+    '''
+    Administrative function to allow site admin to display & view user 
+    information.
+    '''
 
     list_display = ('user', 'bio', 'github',)
     

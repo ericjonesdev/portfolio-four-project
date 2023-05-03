@@ -9,8 +9,10 @@ from cloudinary.models import CloudinaryField
 from django.contrib.auth.decorators import login_required
 
 
-
 class Post(models.Model):
+    '''
+    outlines the criteria to be added to a user's visual post   
+    '''
 
     STATUS_CHOICES = (
         ('Draft', 'Draft'),
@@ -39,6 +41,9 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
+    '''
+    sets parameters for what is to be included within a post comment   
+    '''
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
     name = models.CharField(max_length=80)
     email = models.EmailField()
@@ -54,6 +59,9 @@ class Comment(models.Model):
 
 
 class UserProfiile(models.Model):
+    '''
+    sets parameters for the user profile   
+    '''
     user = models.OneToOneField(User, on_delete=models.CASCADE,)
     profile_image = models.ImageField(upload_to="profile/", blank=True)
     first_name = models.TextField(null=True, blank=True)
@@ -75,6 +83,7 @@ class UserProfiile(models.Model):
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
+    # create or update a user profile when saved to the database
     if created:
         UserProfiile.objects.create(user=instance)
     # Existing users: just save the profile
@@ -82,8 +91,3 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         instance.userprofiile.save()
     except UserProfiile.DoesNotExist:
         pass
-
-
-
-
-
