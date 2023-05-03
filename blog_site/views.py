@@ -177,7 +177,6 @@ class UserProfiileDeleteView(SuccessMessageMixin, generic.DeleteView):
 
     def get_object(self, queryset=None):
         obj = super().get_object()
-        print(obj)
         return obj
 
 
