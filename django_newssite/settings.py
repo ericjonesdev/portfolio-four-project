@@ -93,6 +93,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_newssite.wsgi.application'
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
