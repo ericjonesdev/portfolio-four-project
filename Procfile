@@ -1,1 +1,1 @@
-web: gunicorn django_newssite.wsgi
+web: gunicorn django_newssite.py:application -b 0.0.0.0:8000
