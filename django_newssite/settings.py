@@ -118,17 +118,11 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 #                         port=DATABASES['default']['PORT'],
 #                         sslmode='require')
 
-# Define database URL from the environment file
-DATABASE_URL = os.environ['DATABASE_URL']
-
-# Configure default database
 DATABASES = {
-    'default': dj_database_url.config(
-        conn_max_age=600,
-        conn_health_checks=True,
-        ssl_require=True,
-    ),
-}
+     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+ }
+
+ conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -182,4 +176,4 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)

@@ -1,1 +1,1 @@
-web: gunicorn django_newssite.wsgi --preload --log-file -
+web: gunicorn django_newssite.wsgi
