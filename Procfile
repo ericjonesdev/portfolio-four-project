@@ -1,1 +1,1 @@
-web: gunicorn django_newssite.application -b 0.0.0.0:8000
+web: gunicorn django_newssite.wsgi --env DJANGO_SETTINGS_MODULE=django_newssite.settings
