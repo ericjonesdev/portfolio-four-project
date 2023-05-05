@@ -1,1 +1,1 @@
-web: gunicorn django_newssite.wsgi --env DJANGO_SETTINGS_MODULE=django_newssite.settings
+web: gunicorn django_newssite.wsgi --preload --log-file -
