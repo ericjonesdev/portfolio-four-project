@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 from pathlib import Path
 import os
+import django_heroku
 import psycopg2
 import dj_database_url
 if os.path.isfile('env.py'):
@@ -119,10 +120,19 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 #                         sslmode='require')
 
 DATABASES = {
-     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
- }
+     'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'deg67ki0jiqu29',
+        'USER': 'ceirinrnvizbyq',
+        'PASSWORD': '50aeeb8b566b56cd6bf282bfa4ad44cbd8a39ae82f3ebc145bc363ce70290ea8'
+        'HOST': 'ec2-52-215-68-14.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432'
+     }
 
- conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+}
+
+
+#  conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -167,6 +177,7 @@ STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+django_heroku.settings(locals())
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
@@ -176,4 +187,4 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
