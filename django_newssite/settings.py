@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 from pathlib import Path
 import os
+import psycopg2
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -110,6 +111,8 @@ DATABASES = {
      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
  }
 
+ conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -161,3 +164,5 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
