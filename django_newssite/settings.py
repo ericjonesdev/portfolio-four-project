@@ -111,7 +111,12 @@ DATABASES = {
      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
  }
 
-conn = psycopg2.connect(**DATABASES['default'], sslmode='require')
+conn = psycopg2.connect(database=DATABASES['default']['NAME'],
+                        user=DATABASES['default']['USER'],
+                        password=DATABASES['default']['PASSWORD'],
+                        host=DATABASES['default']['HOST'],
+                        port=DATABASES['default']['PORT'],
+                        sslmode='require')
 
 
 # Password validation
