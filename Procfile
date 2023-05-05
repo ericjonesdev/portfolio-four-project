@@ -1,1 +1,1 @@
-web: gunicorn django_newssite.py:application -b 0.0.0.0:8000
+web: gunicorn django_newssite.application -b 0.0.0.0:8000
