@@ -98,8 +98,11 @@ WSGI_APPLICATION = 'django_newssite.wsgi.application'
 ASGI_APPLICATION = 'django_newssite.asgi.application'
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_SAMESITE = 'None'
+CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
+
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
