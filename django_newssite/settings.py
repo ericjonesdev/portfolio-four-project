@@ -18,6 +18,12 @@ if os.path.isfile('env.py'):
 
 development = os.environ.get('DEVELOPMENT', False)
 
+cloudinary.config(
+    cloud_name=os.environ.get('CLOUD_NAME'),
+    api_key=os.environ.get('CLOUDINARY_API_KEY'),
+    api_secret=os.environ.get('CLOUDINARY_API_SECRET')
+)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
@@ -196,10 +202,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME':
-    dj_database_url.parse(os.environ.get('CLOUD_NAME').encode('utf-8')),
-    'API_KEY':
-    dj_database_url.parse(os.environ.get('API_KEY')).encode('utf-8'),
-    'API_SECRET':
-    dj_database_url.parse(os.environ.get('API_SECRET')).encode('utf-8'),
+    'CLOUD_NAME': os.environ.get('CLOUD_NAME'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
 }
