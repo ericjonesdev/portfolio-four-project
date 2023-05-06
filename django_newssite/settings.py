@@ -196,7 +196,10 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': dj_database_url.parse(os.environ.get('CLOUD_NAME')),
-    'API_KEY': dj_database_url.parse(os.environ.get('API_KEY')),
-    'API_SECRET': dj_database_url.parse(os.environ.get('API_SECRET')),
+    'CLOUD_NAME':
+    dj_database_url.parse(os.environ.get('CLOUD_NAME').encode('utf-8')),
+    'API_KEY':
+    dj_database_url.parse(os.environ.get('API_KEY')).encode('utf-8'),
+    'API_SECRET':
+    dj_database_url.parse(os.environ.get('API_SECRET')).encode('utf-8'),
 }
