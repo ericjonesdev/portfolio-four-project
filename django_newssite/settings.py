@@ -11,19 +11,15 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 from pathlib import Path
 import os
-import django_heroku
-import psycopg2
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
-
+development = os.environ.get('DEVELOPMENT', False)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -34,8 +30,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['a-coders-journey.herokuapp.com', '8000-ericjonesdev-portfolio-f-ca6apef10h.us2.codeanyapp.com', 'localhost',]
-
+ALLOWED_HOSTS = [
+    'a-coders-journey.herokuapp.com',
+    '8000-ericjonesdev-portfolio-f-ca6apef10h.us2.codeanyapp.com',
+    'localhost',
+]
 
 # Application definition
 
@@ -94,9 +93,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django_newssite.wsgi.application'
+ASGI_APPLICATION = 'django_newssite.asgi.application'
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -108,9 +107,17 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 #     }
 # }
 
-# DATABASES = {
-#      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-#  }
+if (development == 'True'):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
 
 # conn = psycopg2.connect(database=DATABASES['default']['NAME'],
 #                         user=DATABASES['default']['USER'],
@@ -119,18 +126,17 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 #                         port=DATABASES['default']['PORT'],
 #                         sslmode='require')
 
-DATABASES = {
-     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'deg67ki0jiqu29',
-        'USER': 'ceirinrnvizbyq',
-        'PASSWORD': '50aeeb8b566b56cd6bf282bfa4ad44cbd8a39ae82f3ebc145bc363ce70290ea8',
-        'HOST': 'ec2-52-215-68-14.eu-west-1.compute.amazonaws.com',
-        'PORT': '5432'
-     }
+# DATABASES = {
+#      'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'deg67ki0jiqu29',
+#         'USER': 'ceirinrnvizbyq',
+#         'PASSWORD': '50aeeb8b566b56cd6bf282bfa4ad44cbd8a39ae82f3ebc145bc363ce70290ea8',
+#         'HOST': 'ec2-52-215-68-14.eu-west-1.compute.amazonaws.com',
+#         'PORT': '5432'
+#      }
 
-}
-
+# }
 
 #  conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
@@ -139,19 +145,22 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 # Internationalization
@@ -167,7 +176,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
@@ -177,7 +185,7 @@ STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
@@ -186,5 +194,3 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
