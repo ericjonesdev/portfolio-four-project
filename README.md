@@ -323,3 +323,12 @@ The Epic, User Stories and Kanban board can be accessed here:
 - [dj_database_url](https://pypi.org/project/dj-database-url/): library used to allow database urls to connect to the postgres db.
 - [psycopg2](https://pypi.org/project/psycopg2/): database adapter used to support the connection to the postgres db.
 - [Heroku](https://www.heroku.com/): used to host the deployed application.
+
+## Testing
+
+### Validator Testing
+
+- <a href="https://validator.w3.org/">HTML Validator</a>
+  - As this project uses Django templates, the html has been validated by manually
+    through the application pages, copying the source of the rendered pages and then
+    validating this version of the html using the W3C validator (link shown above).
