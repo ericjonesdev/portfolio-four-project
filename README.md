@@ -19,3 +19,12 @@ overall structure and asthetic of A Coder's Journey is modeled on the I Think
 Therefore I Blog Code Institute Walkthrough.
 
 < main image here >
+
+## Index - Table of Contents
+
+< table of contents >
+
+## User Experience (UX)
+
+### User stories:
+
