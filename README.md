@@ -131,3 +131,25 @@ features' section of this document.
 < homepage pic >
 
 - - Fo4 - View Posts
+
+Users are able to view blog posts on main site and, using 'next' feature link
+at the bottom of the page, they are able to view historical posts. When users
+create their own post, they are taken to a post list page that shows a history
+of their post. If no post have been created, then a banner is displayed to the
+user indicating that no post have yet been created.
+
+#### Fig 04-A-List of Blog Posts
+
+< blog post view >
+
+- - Fo5 - Create Post
+
+Users are able to click, within the top navbar profile button, the dropdown and
+select to create a post. They are then taken to the create blog post view, where
+they are able to format their post via the summernote WSYIWYG editor. Upon click
+of the 'create' button, located underneath the post text box area, they are taking
+to their individual post list page, which lists their historical posts.
+
+#### Fig 05-A-Create Post View
+
+< create post view >
