@@ -385,7 +385,7 @@ The Epic, User Stories and Kanban board can be accessed here:
 Favicon generator:
 <https://favicon.io/favicon-generator/>
 
-readme inspiration from my mentor and special thanks to - <a href="<https://github.com/elainebroche-dev/">Elaine> Roche</a>:
+readme inspiration from my mentor and special thanks to - <a href="<https://github.com/elainebroche-dev/">Elaine Roche</a>:
 <https://github.com/elainebroche-dev/pf5-iomha-prints>
 
 Troubleshooting wsgi:
