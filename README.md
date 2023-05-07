@@ -184,3 +184,45 @@ can also submit comments, for review, approval or disproval of the site admin.
 #### Fig 08-A-Comments and Likes.
 
 < comments and likes view >
+
+- - Fo9 - Role Based Interactions
+
+Certain functionality is only possible from authenticated users. Likeing a post,
+commenting, editing profile and creating a post are reserved for authenticated users
+only.
+
+#### Fig 09-A-Options for Authenticated Users.
+
+< logged in user options >
+
+- - F10 - Site Administration
+
+The admin dashboard is only available to the superuser. With this dashboard an
+Admin is able to manage users, posts and site structure.
+
+#### Fig 10-A-Site Administration Page
+
+< Site Admin features >
+
+- - F11 - About Us
+
+The about us page gives the user a welcome message, detailing to the user what the
+site is about. It also offers a registration link for those who may be interested
+in joining the site.
+
+#### Fig 11-A-About Us Page
+
+< About >
+
+- - F12 - Footer
+
+The footer section gives the user access to join the site owners on various social
+media platforms, such as Facebook, Twitter, Instagram and Youtube.
+
+#### Fig 12-A-Footer
+
+< Footer >
+
+-How these features support the user stories
+
+    In the User Experience (UX) section of this readme there are
