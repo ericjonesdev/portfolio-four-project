@@ -355,6 +355,7 @@ The Epic, User Stories and Kanban board can be accessed here:
 
 - X_FRAME_SETTINGS known to cause errors with how Summernot displays
   - The user post widget doesn't properly display the WYSIWYG editor
+  - <a href="https://ui.dev/amiresponsive/">amiresponsive</a> website does not display live site due to cookie settings
 -
 
 -
