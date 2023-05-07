@@ -356,6 +356,64 @@ The Epic, User Stories and Kanban board can be accessed here:
 - X_FRAME_SETTINGS known to cause errors with how Summernot displays
   - The user post widget doesn't properly display the WYSIWYG editor
   - <a href="https://ui.dev/amiresponsive/">amiresponsive</a> website does not display live site due to cookie settings
--
 
--
+## Deployment
+
+- Steps for deployment:
+  - Clone <a href="<https://github.com/ericjonesdev/portfolio-four-project/">GitHub> repository</a> to CodeAnywhere virtual environment
+  - Create accounts with ElephantSQL and Heroku
+  - Configure Heruko to host the project and ElephantSQL to host the database
+  - Configure Heroku for automatic deployment from Github
+  - Perform migrations in Django, push the code to the repository main branch
+  - Verify Site is up
+
+## Credits
+
+### Code
+
+- Much of the coding and testing relies heavily on information in the 'I Think
+  Therefore I Blog' walkthrough in the Code Institute Fullstack Frameworks Modules.
+  Functionality such as the like comment were gleaned/utilized from that.
+- Code to implement site Bootsrap was also taken from the walkthrough.
+
+### Coding, Troubleshooting and Inspiration
+
+- The following list of links were used as either examples upon which to build further
+  this project, inspiration and troubleshooting various issues that arose during the
+  process:
+
+Favicon generator:
+<https://favicon.io/favicon-generator/>
+
+readme inspiration from my mentor and special thanks to - <a href="<https://github.com/elainebroche-dev/">Elaine> Roche</a>:
+<https://github.com/elainebroche-dev/pf5-iomha-prints>
+
+Troubleshooting wsgi:
+<https://stackoverflow.com/questions/20034278/where-to-place-wsgi-script-in-django-project>
+<https://code.google.com/archive/p/modwsgi/wikis/IntegrationWithDjango.wiki>
+<https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/modwsgi/>
+<https://modwsgi.readthedocs.io/en/master/>
+
+Heroku deployment issue troubleshooting links:
+<https://laracasts.com/discuss/channels/laravel/heroku-not-loading-appcss-or-appjs>
+<https://www.youtube.com/watch?v=V7ynNo_bko8>
+
+Summernote Troubleshooting:
+<https://cdnjs.com/libraries/summernote>
+<https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default>
+
+Cloudinary troubleshooting and settings.py code example:
+<https://github.com/deji12/blog>
+
+amiresponsive troubleshooting code examples:
+<https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value>
+
+Django / Python code examples:
+<https://stackoverflow.com/questions/15215295/how-to-use-current-logged-in-user-as-pk-for-django-detailview/15222588#15222588>
+<https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-display/>
+
+Markdown:
+<https://www.digitalocean.com/community/tutorials/markdown-markdown-images>
+
+ERD Diagrams:
+<https://app.diagrams.net>
