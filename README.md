@@ -30,7 +30,7 @@ Therefore I Blog Code Institute Walkthrough.
 
 -EPIC 01: Registration and Account Management
   <details>
-  <summary>User Stories for EPIC 01</summary>
+  <summary>User Stories for EPIC 01:</summary>
     -US101: Register for an account
         -As a site user, I can register for an account so that I can view my profile
   </details>
