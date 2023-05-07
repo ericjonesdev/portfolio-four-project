@@ -100,32 +100,34 @@ features' section of this document.
 
 - UX Related Features
 
-  - Fo1 - Consistency among site content
+  - Fo1 - Consistency among site conten
 
-  Consistency is a key aspect of the website's design, and it extends to the page layout, navigation bar, header, footer, color scheme, and typography. This cohesive approach ensures that the user has a seamless and intuitive experience regardless of which page they're on. Additionally, the navigation bar is responsive to different screen sizes and can be collapsed into a 'burger' menu on smaller screens, further enhancing the user experience.
+    Consistency is a key aspect of the website's design, and it extends to the page layout, navigation bar, header, footer, color scheme, and typography. This cohesive approach ensures that the user has a seamless and intuitive experience regardless of which page they're on. Additionally, the navigation bar is responsive to different screen sizes and can be collapsed into a 'burger' menu on smaller screens, further enhancing the user experience.
 
-  #### Fig 01-A Desktop example
+#### Fig 01-A Desktop example
 
-  < desktop homepage image >
+    < desktop homepage image >
 
-  #### Fig 01-B Mobile example
+#### Fig 01-B Mobile example
 
-  < mobile hompage image >
+    < mobile hompage image >
 
-  - Fo2 - Authenticated user indicator
+- - Fo2 - Authenticated user indicator
 
   The user can affirm when they are authenticated (logged in) after successful
   sign up to the site, to which they are taken to the hompage and can view, within
   the navbar at the top, a greyed button with their username within it.
 
-  #### Fig 02-User Icon upon authentication (signup) to site
+#### Fig 02-A-User Icon upon authentication (signup) to site
 
-< user logged in button icon image >
+- - Fo3 - Home Page
 
-- Fo3 - Home Page
+  The application homepage contains a collagae of blog post with stylized post images.
+  The site layout gives an introductory view, illustrating to the user what the
+  overall them of the site relates to.
 
-The application homepage contains a collagae of blog post with stylized post images.
-The site layout gives an introductory view, illustrating to the user what the
-overall them of the site relates to.
+#### Fig 03-A-Site Home Page
 
-#### Fig 02-A-Site Home Page
+< homepage pic >
+
+- - Fo4 - View Posts
