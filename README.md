@@ -128,7 +128,7 @@ features' section of this document.
 
 #### Fig 03-A-Site Home Page
 
-< homepage pic >
+![homepage](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476837/readme/homepage_evia1w.png "homepage")
 
 - - Fo4 - View Posts
 
@@ -140,7 +140,7 @@ user indicating that no post have yet been created.
 
 #### Fig 04-A-List of Blog Posts
 
-< blog post view >
+![Post](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476805/readme/create_post2_csuvic.png "Post")
 
 - - Fo5 - Create Post
 
