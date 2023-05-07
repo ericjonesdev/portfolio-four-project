@@ -112,7 +112,7 @@ features' section of this document.
 
   < mobile hompage image >
 
-- Fo1 - Authenticated user indicator
+  - Fo1 - Authenticated user indicator
 
 The user can affirm when they are authenticated (logged in) after successful
 sign up to the site, to which they are taken to the hompage and can view, within
