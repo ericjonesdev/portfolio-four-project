@@ -27,12 +27,12 @@ Therefore I Blog Code Institute Walkthrough.
 ### User Experience (UX)
 
 
-<details>
-<summary>EPIC 01: Registration and Account Management</summary>
+
+-EPIC 01: Registration and Account Management
   <details>
   <summary>User Stories for EPIC 01</summary>
-
-- As a site user, I can register for an account so that I can view my profile
+-US101: Register for an account
+    - As a site user, I can register for an account so that I can view my profile
 
   </details>
 
