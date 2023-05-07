@@ -31,8 +31,8 @@ Therefore I Blog Code Institute Walkthrough.
 -EPIC 01: Registration and Account Management
   <details>
   <summary>User Stories for EPIC 01</summary>
--US101: Register for an account
-    - As a site user, I can register for an account so that I can view my profile
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;US101: Register for an account
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As a site user, I can register for an account so that I can view my profile
 
   </details>
 
