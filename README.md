@@ -86,3 +86,16 @@ Therefore I Blog Code Institute Walkthrough.
     - As a Site Admin I can have full CRUD capability on Users so that manage users on the site
 
   </details>
+
+### Features
+
+### Existing Features
+
+The following is a breakdown of the primary features of the application. Based 
+on the 'I Think Therefore I Blog' walkthrough project model, this blog site features
+capabilites that are standard for most blog sites. 
+
+Any standard feature that is not outlined here, will be included in the 'future build
+features' section of this document.
+
+
