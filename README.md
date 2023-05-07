@@ -271,4 +271,4 @@ media platforms, such as Facebook, Twitter, Instagram and Youtube.
 
 - Entity-Relationship Diagram for DBMS
 
-![mbile](https://res.cloudinary.com/dxla1usfm/image/upload/v1683488458/readme/ERD_Production_Finished_cx6n19.png "mobile")
+![mbile](https://res.cloudinary.com/dxla1usfm/image/upload/v1683488709/readme/ERD_Production_Finished_tq7mmy.png "mobile")
