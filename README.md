@@ -329,6 +329,32 @@ The Epic, User Stories and Kanban board can be accessed here:
 ### Validator Testing
 
 - <a href="https://validator.w3.org/">HTML Validator</a>
+
   - As this project uses Django templates, the html has been validated by manually
     through the application pages, copying the source of the rendered pages and then
     validating this version of the html using the W3C validator (link shown above).
+
+  - Validation Results:
+    - Home Page
+    - Register Page
+    - Login Page
+    - Logout Page
+    - Profile Page
+    - Post List Page
+    - Edit Profile Page
+
+- <a href="<https://jigsaw.w3.org/css-validator/">CSS Validator</a>
+
+  - Validation Results
+    - PDF Results
+
+- Python Validation was performed using the command: python3 -m flake8.
+  - Python Validation Results
+
+## Known Bugs
+
+- X_FRAME_SETTINGS known to cause errors with how Summernot displays
+  - The user post widget doesn't properly display the WYSIWYG editor
+-
+
+-
