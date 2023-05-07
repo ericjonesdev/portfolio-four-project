@@ -153,3 +153,34 @@ to their individual post list page, which lists their historical posts.
 #### Fig 05-A-Create Post View
 
 < create post view >
+
+- - Fo6 - Profile View
+
+From the authenticated user view, a user can click on the '@'<username> portion
+of their profile button and be taken to their respective profile page. When using
+the profile navbar to click the 'edit profile' choice, they are taken to their
+individual edit profile page, where they are able to edit and save their information.
+
+#### Fig 06-A-Create Profile View
+
+< create profile view >
+
+- - Fo7 - Edit Profile
+
+From the authenticated user view, a user can click on the '@'<username> portion
+of their profile button and be taken to their respective profile page. When using
+the profile navbar to click the 'edit profile' choice, they are taken to their
+individual edit profile page, where they are able to edit and save their information.
+
+#### Fig 07-A-Edit Profile
+
+< edit profile view >
+
+- - Fo8 - Comments and Post Likes
+
+Users are able to toggle the heart-shaped like icon, to like or unlike a post. Users
+can also submit comments, for review, approval or disproval of the site admin.
+
+#### Fig 08-A-Comments and Likes.
+
+< comments and likes view >
