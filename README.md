@@ -385,7 +385,7 @@ The Epic, User Stories and Kanban board can be accessed here:
 Favicon generator:
 <https://favicon.io/favicon-generator/>
 
-readme inspiration from my mentor and special thanks to - <a href="<https://github.com/elainebroche-dev/">Elaine Roche</a>:
+readme inspiration from my mentor and special thanks to - <a href="https://github.com/elainebroche-dev/">Elaine Roche</a>:
 <https://github.com/elainebroche-dev/pf5-iomha-prints>
 
 Troubleshooting wsgi:
@@ -411,6 +411,9 @@ amiresponsive troubleshooting code examples:
 Django / Python code examples:
 <https://stackoverflow.com/questions/15215295/how-to-use-current-logged-in-user-as-pk-for-django-detailview/15222588#15222588>
 <https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-display/>
+<https://stackoverflow.com/questions/5531258/example-of-django-class-based-deleteview>
+<https://stackoverflow.com/questions/862522/django-populate-user-id-when-saving-a-model/15540149#15540149>
+<https://docs.djangoproject.com/en/3.0/ref/class-based-views/mixins-editing/#django.views.generic.edit.ModelFormMixin.form_valid>
 
 Markdown:
 <https://www.digitalocean.com/community/tutorials/markdown-markdown-images>
