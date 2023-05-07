@@ -17,7 +17,7 @@ as search post information by username, date create and slug information. The
 overall structure and asthetic of A Coder's Journey is modeled on the I Think
 Therefore I Blog Code Institute Walkthrough.
 
-<img src="https://res.cloudinary.com/dxla1usfm/image/upload/v1683476837/readme/homepage_evia1w.png/" alt="homepage">
+![homepage](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476837/readme/homepage_evia1w.png "homepage")
 
 ## Index - Table of Contents
 
