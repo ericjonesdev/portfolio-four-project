@@ -225,4 +225,36 @@ media platforms, such as Facebook, Twitter, Instagram and Youtube.
 
 - How these features support the user stories
 
-  In the User Experience (UX) section of this readme there are
+  In the User Experience (UX) section of this readme there are 16 user stories
+  split between 4 Epics. An additional user story (17 - Social Login) is not included
+  within this.
+
+- Features which could be impletemented in the future
+
+  - User functionality
+
+    - Allow the users the ability to delete thier own post
+
+      Having the ability to delete one's own post and/or information is integral
+      to great user experience. This would improve site usability.
+
+    - Post, category and user search function
+
+      With the ability to properly search the site, it would create an easier
+      navigation, thus increasing viewership.
+
+    - Social Login
+
+      The ability to log on using popular social media accounts provides an ease
+      of access and fosters a bigger online community and patronage.
+
+    - Change Password
+
+      Changing a password is sometimes necessary to increase personal, as well as
+      site security.
+
+    - Site Chat
+
+      Have an online social chat space can increase the likelyhood of information
+      sharing between prospective software engineers and is a sought after
+      function on a great deal of blogs.
