@@ -291,3 +291,11 @@ media platforms, such as Facebook, Twitter, Instagram and Youtube.
 ![mbile](https://res.cloudinary.com/dxla1usfm/image/upload/v1683490937/readme/ERD_Production_Finished_ojrojs.png "mobile")
 
 ## Planning
+
+Using GitHub Project as the Agile to for this web app, User Stories with acceptance
+criteria were defined using GitHub Issues. The Kanban board was used as a control
+mechanism for the different stages of the product iterations. The acceptance criteria
+were tested as each story moved to the 'Done' section of the Kanban.
+
+The Epic, User Stories and Kanban board can be accessed here:
+<a href="https://github.com/ericjonesdev/portfolio-four-project/issues/">A Coder's Journey Agile Tool</a>
