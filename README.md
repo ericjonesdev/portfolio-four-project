@@ -67,14 +67,22 @@ Therefore I Blog Code Institute Walkthrough.
     - As a Site User I can leave comments on a post so that I can be involved in the conversation
   - US303: Like / Unlike a Post
     - As a Site User I can like or unlike a post so that I can interact with the content
+  - US304: Like / Create Drafts
+    - As a Site User & Site Admin I can create draft posts so that I can finish writing the content later
+  - US305: Like / View Post Likes
+    - As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral
 
   </details>
 
-- EPIC 05: Admin and Management
+- EPIC 04: Admin and Management
   <details>
   <summary>User Stories:</summary>
 
-  - US106: Approve Comments
+  - US401: Approve Comments
     - As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments
+  - US402: Manage Posts
+    - As a Site Admin I can create, read, update and delete posts so that I can manage the blog content
+  - US403: Manage Users
+    - As a Site Admin I can have full CRUD capability on Users so that manage users on the site
 
   </details>
