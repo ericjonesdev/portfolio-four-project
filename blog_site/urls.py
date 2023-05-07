@@ -19,4 +19,4 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('<slug:slug>/edit/', views.UserBlogPostUpdateView.as_view(), name='edit_post'),
     path('my_posts/', login_required(views.UserBlogPostListView.as_view()), name='my_posts'),
-]
+] 

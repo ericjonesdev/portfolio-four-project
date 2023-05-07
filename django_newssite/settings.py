@@ -35,6 +35,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'a-coders-journey.herokuapp.com',
     '8000-ericjonesdev-portfolio-f-ca6apef10h.us2.codeanyapp.com',
+    '8000-ericjonesdev-portfolio-f-2mur0b6fp4.us2.codeanyapp.com',
     'localhost',
 ]
 
@@ -125,6 +126,7 @@ else:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
+    
 
 # conn = psycopg2.connect(database=DATABASES['default']['NAME'],
 #                         user=DATABASES['default']['USER'],
