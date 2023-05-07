@@ -26,6 +26,7 @@ Therefore I Blog Code Institute Walkthrough.
 
 ### User Experience (UX)
 
+
 - EPIC 01: Registration and Account Management
   <details>
   <summary>User Stories for EPIC 01</summary>
@@ -38,5 +39,19 @@ Therefore I Blog Code Institute Walkthrough.
   <summary>User Stories for EPIC 01</summary>
 
   - As a Site user / Admin I can Log in to the site so that I can gain access to my profile and functionalities
+  </details>
+
+- EPIC 03: User Profile Creation
+  <details>
+  <summary>User Stories for EPIC 01</summary>
+
+  - As a Site User I can create my own user profile so that I can create a short description/bio to showcase to other Site Users
+  </details>
+
+- EPIC 03: User Profile Creation
+  <details>
+  <summary>User Stories for EPIC 01</summary>
+
+  - As a Site User I can create my own user profile so that I can create a short description/bio to showcase to other Site Users
   </details>
 
