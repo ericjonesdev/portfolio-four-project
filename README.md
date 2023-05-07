@@ -271,4 +271,20 @@ media platforms, such as Facebook, Twitter, Instagram and Youtube.
 
 - Entity-Relationship Diagram for DBMS
 
+  - Notes on the ER diagram:
+
+    The ER diagram (ERD) provided shows the logical data model. The many-to-many
+    relations between Comment and Post is identified by an asterisk to clarify
+    the relationship. The foreign key relationship between Post and User is
+    identified as a 1-to-1 relationship, with User being the imported Django
+    User model, used throughout the site.
+
+    The UserProfiile (misspelling intentional) is the custom model created to
+    handle the backened server side of the User object, as it is serviced for
+    things such as profile creation, reading, updating and deletion.
+
+    The Comment and Like models rely heavily on the 'I Think Therefore I Blog'
+    walkthrough. The PostForm Model (not pictured here) is implemented with an
+    import from Summernote software to service the PostForm functionality.
+
 ![mbile](https://res.cloudinary.com/dxla1usfm/image/upload/v1683488709/readme/ERD_Production_Finished_tq7mmy.png "mobile")
