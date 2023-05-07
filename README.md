@@ -106,11 +106,11 @@ features' section of this document.
 
 #### Fig 01-A Desktop example
 
-    ![homepage](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476837/readme/homepage_evia1w.png "homepage")
+![homepage](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476837/readme/homepage_evia1w.png "homepage")
 
 #### Fig 01-B Mobile example
 
-    ![homepage](https://res.cloudinary.com/dxla1usfm/image/upload/v1683483322/readme/a_coders_journey_mobile_hbiarv.jpg "homepage")
+![mbile](https://res.cloudinary.com/dxla1usfm/image/upload/v1683483322/readme/a_coders_journey_mobile_hbiarv.jpg "mobile")
 
 - - Fo2 - Authenticated user indicator
 
