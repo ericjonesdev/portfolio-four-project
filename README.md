@@ -408,7 +408,7 @@ Cloudinary troubleshooting and settings.py code example:
 amiresponsive troubleshooting code examples:
 <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value>
 
-Django / Python code examples:
+Django / Python code examples:<br>
 <https://stackoverflow.com/questions/15215295/how-to-use-current-logged-in-user-as-pk-for-django-detailview/15222588#15222588>
 <https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-display/>
 <https://stackoverflow.com/questions/5531258/example-of-django-class-based-deleteview>
