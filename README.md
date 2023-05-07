@@ -299,3 +299,29 @@ were tested as each story moved to the 'Done' section of the Kanban.
 
 The Epic, User Stories and Kanban board can be accessed here:
 <a href="https://github.com/ericjonesdev/portfolio-four-project/issues/">A Coder's Journey Agile Tool</a>
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- Jquery
+- Python
+
+## Frameworks, Libraries & Programs Used
+
+- [Google Fonts](https://fonts.google.com/): used for consistent site wide standard fonts.
+- [Font Awesome](https://fontawesome.com/): was used to add icons for aesthetic and UX purposes.
+- [Git](https://git-scm.com/): was used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
+- [GitHub](https://github.com/): is used as the respository for the project code after being pushed from Git. In addition, for this project GitHub was used for the agile development aspect through the use of User Stories (GitHub Issues) and tracking them on a Kanban board.
+- [Django](https://www.djangoproject.com/): was used as the framework to support rapid and secure development of the application.
+- [Bootstrap](https://getbootstrap.com/): was used to build responsive web pages
+- [Django allauth](https://django-allauth.readthedocs.io/en/latest/index.html) used for account registration and authentication (version 0.41.0 installed because of project dependencies).
+- [Pillow](https://python-pillow.org/): Python Imaging Library used for image handling.
+- [jquery](https://jquery.com/): library for various pieces of functionality including adding and removing items from the shopping cart and handling the increment and decrement of the quantity control.
+- [Django crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/): used to simplify form rendering.
+- [Summernote](https://summernote.org/): used to provide WYSIWYG editing on the Artist Bio editing screen.
+- [Gunicorn](https://gunicorn.org/): was used as the Web Server to run Django on Heroku.
+- [dj_database_url](https://pypi.org/project/dj-database-url/): library used to allow database urls to connect to the postgres db.
+- [psycopg2](https://pypi.org/project/psycopg2/): database adapter used to support the connection to the postgres db.
+- [django_storages](https://django-storages.readthedocs.io/en/latest/): used to connect django to S3.
+- [Heroku](https://www.heroku.com/): used to host the deployed application.
