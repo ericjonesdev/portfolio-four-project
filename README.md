@@ -57,12 +57,16 @@ Therefore I Blog Code Institute Walkthrough.
 
   </details>
 
-- EPIC 03: Commenting and Likes
+- EPIC 03: Posts and Comments
   <details>
   <summary>User Stories:</summary>
 
-  - US106: Approve Comments
-    - As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments
+  - US301: View Posts
+    - As a Site User I can click on a post so that I can read the full text
+  - US302: Comment On a Post
+    - As a Site User I can leave comments on a post so that I can be involved in the conversation
+  - US303: Like / Unlike a Post
+    - As a Site User I can like or unlike a post so that I can interact with the content
 
   </details>
 
@@ -74,10 +78,11 @@ Therefore I Blog Code Institute Walkthrough.
 
   </details>
 
-- EPIC 05: Admin and Store Management
+- EPIC 05: Admin and Management
   <details>
   <summary>User Stories:</summary>
 
-  <!-- User stories for EPIC 05 go here -->
+  - US106: Approve Comments
+    - As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments
 
   </details>
