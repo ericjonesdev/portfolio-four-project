@@ -70,14 +70,6 @@ Therefore I Blog Code Institute Walkthrough.
 
   </details>
 
-- EPIC 04: Purchasing and Checkout
-  <details>
-  <summary>User Stories:</summary>
-
-  <!-- User stories for EPIC 04 go here -->
-
-  </details>
-
 - EPIC 05: Admin and Management
   <details>
   <summary>User Stories:</summary>
