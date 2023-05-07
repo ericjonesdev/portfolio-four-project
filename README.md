@@ -2,7 +2,7 @@
 
 <hr>
 
-<a href="https://a-coders-journey.herokuapp.com/>View the live page here</a> 
+<a href="https://a-coders-journey.herokuapp.com/">View the live page here</a> 
 
 A coder's Journey is a web application which serves as a database & online 
 community of people interested in the particulars related to software development,
