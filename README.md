@@ -27,33 +27,34 @@ Therefore I Blog Code Institute Walkthrough.
 ### User Experience (UX)
 
 
-    <details>
-    <summary>EPIC 01: Registration and Account Management</summary>
-    <details>
-    <summary>User Stories for EPIC 01</summary>
+<details>
+<summary>EPIC 01: Registration and Account Management</summary>
+  <details>
+  <summary>User Stories for EPIC 01</summary>
 
-    - As a site user, I can register for an account so that I can view my profile
+- As a site user, I can register for an account so that I can view my profile
 
-    </details>
+  </details>
 
-    - EPIC 02: Login and Logout
-    <details>
-    <summary>User Stories for EPIC 01</summary>
+- EPIC 02: Login and Logout
+  <details>
+  <summary>User Stories for EPIC 01</summary>
 
-    - As a Site user / Admin I can Log in to the site so that I can gain access to my profile and functionalities
-    </details>
+  - As a Site user / Admin I can Log in to the site so that I can gain access to my profile and functionalities
+  </details>
 
-    - EPIC 03: User Profile Creation
-    <details>
-    <summary>User Stories for EPIC 01</summary>
+- EPIC 03: User Profile Creation
+  <details>
+  <summary>User Stories for EPIC 01</summary>
 
-    - As a Site User I can create my own user profile so that I can create a short description/bio to showcase to other Site Users
-    </details>
+  - As a Site User I can create my own user profile so that I can create a short description/bio to showcase to other Site Users
+  </details>
 
-    - EPIC 03: User Profile Creation
-    <details>
-    <summary>User Stories for EPIC 01</summary>
+- EPIC 03: User Profile Creation
+  <details>
+  <summary>User Stories for EPIC 01</summary>
 
-    - As a Site User I can create my own user profile so that I can create a short description/bio to showcase to other Site Users
-    </details>
-    </details>
+  - As a Site User I can create my own user profile so that I can create a short description/bio to showcase to other Site Users
+  </details>
+  </details>
+
