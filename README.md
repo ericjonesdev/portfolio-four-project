@@ -98,7 +98,7 @@ capabilites that are standard for most blog sites.
 Any standard feature that is not outlined here, will be included in the 'future build
 features' section of this document.
 
-- US Related Features
+- UX Related Features
 
   - Fo1 - Consistency among site content
 
@@ -112,12 +112,20 @@ features' section of this document.
 
   < mobile hompage image >
 
-  - Fo1 - Authenticated user indicator
+  - Fo2 - Authenticated user indicator
 
-The user can affirm when they are authenticated (logged in) after successful
-sign up to the site, to which they are taken to the hompage and can view, within
-the navbar at the top, a greyed button with their username within it.
+  The user can affirm when they are authenticated (logged in) after successful
+  sign up to the site, to which they are taken to the hompage and can view, within
+  the navbar at the top, a greyed button with their username within it.
 
-#### Fig 02-User Icon upon authentication (signup) to site
+  #### Fig 02-User Icon upon authentication (signup) to site
 
 < user logged in button icon image >
+
+- Fo3 - Home Page
+
+The application homepage contains a collagae of blog post with stylized post images.
+The site layout gives an introductory view, illustrating to the user what the
+overall them of the site relates to.
+
+#### Fig 02-A-Site Home Page
