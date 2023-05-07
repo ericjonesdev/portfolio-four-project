@@ -374,7 +374,7 @@ The Epic, User Stories and Kanban board can be accessed here:
 - Much of the coding and testing relies heavily on information in the 'I Think
   Therefore I Blog' walkthrough in the Code Institute Fullstack Frameworks Modules.
   Functionality such as the like comment were gleaned/utilized from that.
-- Code to implement site Bootsrap was also taken from the walkthrough.
+- Code to implement site Bootsrtap was also taken from the walkthrough.
 
 ### Coding, Troubleshooting and Inspiration
 
@@ -420,3 +420,11 @@ Markdown:<br>
 
 ERD Diagrams:
 <https://app.diagrams.net>
+
+## Media
+
+- The images used for the default blog posts where taken from <a href="https://www.pexels.com/">Pexels</a>
+
+## Acknowledgments
+
+- Thank you to my mentor Elaine Roche for all of her guidance, help and feedback throughout each project on this course.
