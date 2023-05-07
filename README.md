@@ -223,6 +223,6 @@ media platforms, such as Facebook, Twitter, Instagram and Youtube.
 
 < Footer >
 
--How these features support the user stories
+- How these features support the user stories
 
-    In the User Experience (UX) section of this readme there are
+  In the User Experience (UX) section of this readme there are
