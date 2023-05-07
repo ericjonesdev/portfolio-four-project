@@ -27,22 +27,20 @@ Therefore I Blog Code Institute Walkthrough.
 
 #### User Stories:
 
-### User Experience (UX)
-
 - EPIC 01: Registration and Account Management
   <details>
   <summary>User Stories:</summary>
 
-  - US101: Register for an account
-    - As a site user, I can register for an account so that I can view my profile and purchasing history
+  - US101: Account Registration
+    - As a Site User I can register an account so that I can be able to log in and manage my account settings
   - US102: Login and Logout
-    - As a site user, I can easily login or logout so that I can access my personal account information
-  - US103: Reset Password
-    - As a site user, I can easily reset my password in case I forget so that I can recover access to my account
-  - US104: Confirm Registration via Email
-    - As a site user, I can receive an email confirmation after registering so that I can verify that my account registration was successful
-  - US105: Access User Profile
-    - As a site user, I can access my personalized user profile so that I can view my personal order history and order confirmations and my payment information
+    - As As a Site user / Admin I can Log in to the site so that I can gain access to my profile and functionalities
+  - US103: Profile Page Creation
+    - As a Site User I can create my own user profile page so that I can create a short description/bio to showcase to other Site Users
+  - US104: Update User Profile
+    - As a Site user I can update my profile information so that my information is current and applicable
+  - US105: Delete User Profile
+    - As a Site user I can delete a user profile so that the user profile is removed from the database
 
   </details>
 
@@ -50,15 +48,21 @@ Therefore I Blog Code Institute Walkthrough.
   <details>
   <summary>User Stories:</summary>
 
-  <!-- User stories for EPIC 02 go here -->
+  - US201: Account Registration
+    - As a Site User I can register an account so that I can be able to log in and manage my account settings
+  - US202: Login and Logout
+    - As As a Site user / Admin I can Log in to the site so that I can gain access to my profile and functionalities
+  - US203: Profile Page Creation
+    - As a Site User I can create my own user profile page so that I can create a short description/bio to showcase to other Site Users
 
   </details>
 
-- EPIC 03: Sorting and Searching
+- EPIC 03: Commenting and Likes
   <details>
   <summary>User Stories:</summary>
 
-  <!-- User stories for EPIC 03 go here -->
+  - US106: Approve Comments
+    - As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments
 
   </details>
 
@@ -75,13 +79,5 @@ Therefore I Blog Code Institute Walkthrough.
   <summary>User Stories:</summary>
 
   <!-- User stories for EPIC 05 go here -->
-
-  </details>
-
-- EPIC 06: SEO and Web Marketing
-  <details>
-  <summary>User Stories:</summary>
-
-  <!-- User stories for EPIC 06 go here -->
 
   </details>
