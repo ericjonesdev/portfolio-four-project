@@ -17,3 +17,5 @@ Admin users are able to manage all CRUD functionalities within the site, as well
 as search post information by username, date create and slug information. The 
 overall structure and asthetic of A Coder's Journey is modeled on the I Think
 Therefore I Blog Code Institute Walkthrough.
+
+< main image here >
