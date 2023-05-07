@@ -33,3 +33,10 @@ Therefore I Blog Code Institute Walkthrough.
   - As a site user, I can register for an account so that I can view my profile
   </details>
 
+- EPIC 02: Login and Logout
+<details>
+<summary>User Stories for EPIC 01</summary>
+
+- As a Site user / Admin I can Log in to the site so that I can gain access to my profile and functionalities
+</details>
+
