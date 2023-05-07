@@ -153,6 +153,7 @@ to their individual post list page, which lists their historical posts.
 #### Fig 05-A-Create Post View
 
 ![Post](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476805/readme/create_post2_csuvic.png "Post")
+![Post](https://res.cloudinary.com/dxla1usfm/image/upload/v1683490381/readme/published_post2_akcrz5.png "Post")
 
 - - Fo6 - Profile View
 
@@ -163,7 +164,7 @@ individual edit profile page, where they are able to edit and save their informa
 
 #### Fig 06-A-Create Profile View
 
-![Post](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476805/readme/authenticated_user_choices_va1amv.png "Post")
+![Profile](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476805/readme/authenticated_user_choices_va1amv.png "Profile")
 
 - - Fo7 - Edit Profile
 
@@ -174,7 +175,7 @@ individual edit profile page, where they are able to edit and save their informa
 
 #### Fig 07-A-Edit Profile
 
-![Post](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476876/readme/update_user_profile_fi2ary.png "Post")
+![Edit](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476876/readme/update_user_profile_fi2ary.png "Edit")
 
 - - Fo8 - Comments and Post Likes
 
@@ -183,7 +184,7 @@ can also submit comments, for review, approval or disproval of the site admin.
 
 #### Fig 08-A-Comments and Likes.
 
-< comments and likes view >
+![Comments](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476850/readme/liked_post_wmuhej.png "Comments")
 
 - - Fo9 - Role Based Interactions
 
@@ -193,7 +194,7 @@ only.
 
 #### Fig 09-A-Options for Authenticated Users.
 
-< logged in user options >
+![Options](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476805/readme/authenticated_user_choices_va1amv.png "Options")
 
 - - F10 - Site Administration
 
@@ -202,7 +203,7 @@ Admin is able to manage users, posts and site structure.
 
 #### Fig 10-A-Site Administration Page
 
-< Site Admin features >
+![Admin](https://res.cloudinary.com/dxla1usfm/image/upload/v1683480532/readme/admin_panel_fczvpn.png "Admin")
 
 - - F11 - About Us
 
@@ -212,7 +213,7 @@ in joining the site.
 
 #### Fig 11-A-About Us Page
 
-< About >
+![About](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476805/readme/About_Us_nhsbv2.png "About")
 
 - - F12 - Footer
 
@@ -221,7 +222,7 @@ media platforms, such as Facebook, Twitter, Instagram and Youtube.
 
 #### Fig 12-A-Footer
 
-< Footer >
+![Footer](https://res.cloudinary.com/dxla1usfm/image/upload/v1683490369/readme/homepage_footer_cq18k0.png "Footer")
 
 - How these features support the user stories
 
