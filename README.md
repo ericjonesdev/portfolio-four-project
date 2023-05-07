@@ -382,7 +382,7 @@ The Epic, User Stories and Kanban board can be accessed here:
   this project, inspiration and troubleshooting various issues that arose during the
   process:
 
-Favicon generator:
+Favicon generator:<br>
 <https://favicon.io/favicon-generator/>
 
 readme inspiration my mentor - <a href="https://github.com/elainebroche-dev/">Elaine Roche</a>:<br>
@@ -394,7 +394,7 @@ Troubleshooting wsgi:<br>
 <https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/modwsgi/>
 <https://modwsgi.readthedocs.io/en/master/>
 
-Heroku deployment issue troubleshooting links:
+Heroku deployment issue troubleshooting links:<br>
 <https://laracasts.com/discuss/channels/laravel/heroku-not-loading-appcss-or-appjs>
 <https://www.youtube.com/watch?v=V7ynNo_bko8>
 
@@ -402,10 +402,10 @@ Summernote Troubleshooting:<br>
 <https://cdnjs.com/libraries/summernote>
 <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default>
 
-Cloudinary troubleshooting and settings.py code example:
+Cloudinary troubleshooting and settings.py code example:<br>
 <https://github.com/deji12/blog>
 
-amiresponsive troubleshooting code examples:
+amiresponsive troubleshooting code examples:<br>
 <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value>
 
 Django / Python code examples:<br>
@@ -415,7 +415,7 @@ Django / Python code examples:<br>
 <https://stackoverflow.com/questions/862522/django-populate-user-id-when-saving-a-model/15540149#15540149>
 <https://docs.djangoproject.com/en/3.0/ref/class-based-views/mixins-editing/#django.views.generic.edit.ModelFormMixin.form_valid>
 
-Markdown:
+Markdown:<br>
 <https://www.digitalocean.com/community/tutorials/markdown-markdown-images>
 
 ERD Diagrams:
