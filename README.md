@@ -106,4 +106,18 @@ features' section of this document.
 
   #### Fig 01-A Desktop example
 
-  < desktop image >
+  < desktop homepage image >
+
+  #### Fig 01-B Mobile example
+
+  < mobile hompage image >
+
+- Fo1 - Authenticated user indicator
+
+The user can affirm when they are authenticated (logged in) after successful
+sign up to the site, to which they are taken to the hompage and can view, within
+the navbar at the top, a greyed button with their username within it.
+
+#### Fig 02-User Icon upon authentication (signup) to site
+
+< user logged in button icon image >
