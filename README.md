@@ -258,3 +258,15 @@ media platforms, such as Facebook, Twitter, Instagram and Youtube.
       Have an online social chat space can increase the likelyhood of information
       sharing between prospective software engineers and is a sought after
       function on a great deal of blogs.
+
+## Design
+
+### Methodology
+
+- I think Therefore I blog
+
+  This site design and layout used the Code Institute walkthrough and, as such,
+  didn't require a wireframe. Although wireframes are useful for prototyping new
+  websites, the backend functionality took precedent, due to time constraints.
+
+- Entity-Relationship Diagram for DBMS
