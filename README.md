@@ -385,10 +385,10 @@ The Epic, User Stories and Kanban board can be accessed here:
 Favicon generator:
 <https://favicon.io/favicon-generator/>
 
-readme inspiration from my mentor and special thanks to - <a href="https://github.com/elainebroche-dev/">Elaine Roche</a>:
+readme inspiration my mentor - <a href="https://github.com/elainebroche-dev/">Elaine Roche</a>:<br>
 <https://github.com/elainebroche-dev/pf5-iomha-prints>
 
-Troubleshooting wsgi:
+Troubleshooting wsgi:<br>
 <https://stackoverflow.com/questions/20034278/where-to-place-wsgi-script-in-django-project>
 <https://code.google.com/archive/p/modwsgi/wikis/IntegrationWithDjango.wiki>
 <https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/modwsgi/>
@@ -398,7 +398,7 @@ Heroku deployment issue troubleshooting links:
 <https://laracasts.com/discuss/channels/laravel/heroku-not-loading-appcss-or-appjs>
 <https://www.youtube.com/watch?v=V7ynNo_bko8>
 
-Summernote Troubleshooting:
+Summernote Troubleshooting:<br>
 <https://cdnjs.com/libraries/summernote>
 <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default>
 
