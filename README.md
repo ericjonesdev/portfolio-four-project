@@ -140,7 +140,7 @@ user indicating that no post have yet been created.
 
 #### Fig 04-A-List of Blog Posts
 
-![Post](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476805/readme/create_post2_csuvic.png "Post")
+![Post](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476857/readme/published_post_nkiskq.png "Post")
 
 - - Fo5 - Create Post
 
@@ -152,7 +152,7 @@ to their individual post list page, which lists their historical posts.
 
 #### Fig 05-A-Create Post View
 
-< create post view >
+![Post](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476805/readme/create_post2_csuvic.png "Post")
 
 - - Fo6 - Profile View
 
@@ -163,7 +163,7 @@ individual edit profile page, where they are able to edit and save their informa
 
 #### Fig 06-A-Create Profile View
 
-< create profile view >
+![Post](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476805/readme/authenticated_user_choices_va1amv.png "Post")
 
 - - Fo7 - Edit Profile
 
@@ -174,7 +174,7 @@ individual edit profile page, where they are able to edit and save their informa
 
 #### Fig 07-A-Edit Profile
 
-< edit profile view >
+![Post](https://res.cloudinary.com/dxla1usfm/image/upload/v1683476876/readme/update_user_profile_fi2ary.png "Post")
 
 - - Fo8 - Comments and Post Likes
 
