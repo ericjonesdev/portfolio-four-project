@@ -91,11 +91,19 @@ Therefore I Blog Code Institute Walkthrough.
 
 ### Existing Features
 
-The following is a breakdown of the primary features of the application. Based 
+The following is a breakdown of the primary features of the application. Based
 on the 'I Think Therefore I Blog' walkthrough project model, this blog site features
-capabilites that are standard for most blog sites. 
+capabilites that are standard for most blog sites.
 
 Any standard feature that is not outlined here, will be included in the 'future build
 features' section of this document.
 
+- US Related Features
 
+  - Fo1 - Consistency among site content
+
+  Consistency is a key aspect of the website's design, and it extends to the page layout, navigation bar, header, footer, color scheme, and typography. This cohesive approach ensures that the user has a seamless and intuitive experience regardless of which page they're on. Additionally, the navigation bar is responsive to different screen sizes and can be collapsed into a 'burger' menu on smaller screens, further enhancing the user experience.
+
+  #### Fig 01-A Desktop example
+
+  < desktop image >
