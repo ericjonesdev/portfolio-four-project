@@ -115,18 +115,17 @@ CSRF_COOKIE_SAMESITE = 'None'
 #     }
 # }
 
-if (development == 'True'):
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-else:
-    DATABASES = {
+# if (development == 'True'):
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+# else:
+DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-    
 
 # conn = psycopg2.connect(database=DATABASES['default']['NAME'],
 #                         user=DATABASES['default']['USER'],
