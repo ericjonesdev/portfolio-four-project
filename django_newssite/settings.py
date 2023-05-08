@@ -103,45 +103,18 @@ CSRF_COOKIE_SAMESITE = 'None'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# if (development == 'True'):
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': BASE_DIR / 'db.sqlite3',
-#         }
-#     }
-# else:
-DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+if (development == 'True'):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
+else:
+    DATABASES = {
+            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        }
 
-# conn = psycopg2.connect(database=DATABASES['default']['NAME'],
-#                         user=DATABASES['default']['USER'],
-#                         password=DATABASES['default']['PASSWORD'],
-#                         host=DATABASES['default']['HOST'],
-#                         port=DATABASES['default']['PORT'],
-#                         sslmode='require')
-
-# DATABASES = {
-#      'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'deg67ki0jiqu29',
-#         'USER': 'ceirinrnvizbyq',
-#         'PASSWORD': '50aeeb8b566b56cd6bf282bfa4ad44cbd8a39ae82f3ebc145bc363ce70290ea8',
-#         'HOST': 'ec2-52-215-68-14.eu-west-1.compute.amazonaws.com',
-#         'PORT': '5432'
-#      }
-
-# }
-
-#  conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
