@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 from pathlib import Path
-import cloudinary
-import cloudinary_storage
+# import cloudinary
+# import cloudinary_storage
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
@@ -196,16 +196,16 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-cloudinary.config(cloud_name=os.environ.get('CLOUD_NAME'),
-                  api_key=os.environ.get('CLOUDINARY_API_KEY'),
-                  api_secret=os.environ.get('CLOUDINARY_API_SECRET'))
+# cloudinary.config(cloud_name=os.environ.get('CLOUD_NAME'),
+#                   api_key=os.environ.get('CLOUDINARY_API_KEY'),
+#                   api_secret=os.environ.get('CLOUDINARY_API_SECRET'))
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.environ.get('CLOUD_NAME'),
