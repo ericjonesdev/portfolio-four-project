@@ -342,7 +342,7 @@ The Epic, User Stories and Kanban board can be accessed here:
     - Profile
     - Post List
     - Edit Profile
-    - About Us
+    - <a href="documentation/AboutUs.pdf">About Us</a>
 
 - <a href="<https://jigsaw.w3.org/css-validator/">CSS Validator</a>
 
