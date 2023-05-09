@@ -341,7 +341,7 @@ The Epic, User Stories and Kanban board can be accessed here:
     - <a href="documentation/logout.pdf">Logout</a>
     - <a href="documentation/profile.pdf">Profile</a>
     - Post List
-    - Edit Profile
+    - <a href="documentation/update_profile.pdf">Update Profile</a>
     - <a href="documentation/AboutUs.pdf">About Us</a>
 
 - <a href="<https://jigsaw.w3.org/css-validator/">CSS Validator</a>
