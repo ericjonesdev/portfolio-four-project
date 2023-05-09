@@ -337,7 +337,7 @@ The Epic, User Stories and Kanban board can be accessed here:
   - Validation Results:
     - <a href="documentation/Validation_index_dot_html">HomePage</a>
     - <a href="documentation/signup.pdf">Register</a>
-    - Login
+    - <a href="documentation/login.pdf">Login</a>
     - Logout
     - Profile
     - Post List
