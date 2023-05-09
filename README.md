@@ -335,13 +335,14 @@ The Epic, User Stories and Kanban board can be accessed here:
     validating this version of the html using the W3C validator (link shown above).
 
   - Validation Results:
-    - Home Page
-    - Register Page
-    - Login Page
-    - Logout Page
-    - Profile Page
-    - Post List Page
-    - Edit Profile Page
+    - <a href="documentation/Validation_index_dot_html" alt="homepage_resulst">Home Page</a>
+    - Register
+    - Login
+    - Logout
+    - Profile
+    - Post List
+    - Edit Profile
+    - About Us
 
 - <a href="<https://jigsaw.w3.org/css-validator/">CSS Validator</a>
 
