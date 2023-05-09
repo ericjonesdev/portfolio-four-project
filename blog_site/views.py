@@ -15,7 +15,6 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView
 
-
 User = get_user_model()
 
 
@@ -115,7 +114,8 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-class UserProfiileDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
+class UserProfiileDetailView(LoginRequiredMixin, UserPassesTestMixin,
+                             DetailView):
     '''
     defines a detail view for user profiles, requiring login and user ownership via the
     LoginRequiredMixin UserPassesTestMixin. It gets the user object based on the URL 
@@ -141,30 +141,35 @@ class UserProfiileDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView
         return context
 
 
-class UserProfiileUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class UserProfiileUpdateView(LoginRequiredMixin, UserPassesTestMixin,
+                             UpdateView):
     '''
     uses the UserProfiile model to provide the editable fields to the user profile view.
     ensures that the user is the currently logged in user.
     '''
     model = UserProfiile
     template_name = 'update_profile.html'
-    fields = ['profile_image', 'first_name', 'last_name', 'bio', 'dob', 'location', 'github', 'website', 'twitter', 'occupation']
+    fields = [
+        'profile_image', 'first_name', 'last_name', 'bio', 'dob', 'location',
+        'github', 'website', 'twitter', 'occupation'
+    ]
     success_url = '/'
-    
+
     def test_func(self):
         return self.get_object().user == self.request.user
 
     def get_object(self, queryset=None):
-        obj, created = UserProfiile.objects.get_or_create(user=self.request.user)
+        obj, created = UserProfiile.objects.get_or_create(
+            user=self.request.user)
         return obj
-   
+
 
 class UserProfiileDeleteView(SuccessMessageMixin, generic.DeleteView):
     '''
     uses the User model to provide the relationship need to get_context_data
     and provide the user object to be deleted
     '''
-    
+
     model = User
     template = 'delete_profile.html'
     success_message = "User has been deleted!"
@@ -183,7 +188,7 @@ class UserProfiileDeleteView(SuccessMessageMixin, generic.DeleteView):
 @method_decorator(login_required, name='dispatch')
 class UserBlogPostCreateView(CreateView):
     '''
-    uses the Post model and PostForm classes to allow a logged in user to 
+    uses the Post model and PostForm classes to allow a logged in user to
     create a new post. Upon successful completion of a post, the user is then 
     taken to their unique listing of published posts.
     '''
@@ -197,7 +202,6 @@ class UserBlogPostCreateView(CreateView):
         form.instance.status = form.cleaned_data['status']
         return super().form_valid(form)
 
-
     def get_success_url(self):
         return reverse_lazy('post_list')
 
@@ -206,13 +210,14 @@ class UserBlogPostCreateView(CreateView):
         return kwargs
 
 
-class UserBlogPostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class UserBlogPostUpdateView(LoginRequiredMixin, UserPassesTestMixin,
+                             UpdateView):
     '''
     future functionality **see readme.md
     '''
     model = Post
     fields = ['title', 'slug', 'content', 'status']
-    
+
     def test_func(self):
         blog_post = self.get_object()
         return blog_post.author == self.request.user
@@ -261,6 +266,7 @@ class UserBlogPostListView(LoginRequiredMixin, ListView):
         if not context['posts']:
             context['message'] = 'You have not created any posts yet.'
         return context
+
 
 def about(request):
     # renders the about page

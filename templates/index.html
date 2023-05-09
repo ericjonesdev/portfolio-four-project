@@ -15,9 +15,11 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://storage.googleapis.com/pai-images/e1395b4e59da4456a52a2a77f7948b79.png">
+                                    src="https://storage.googleapis.com/pai-images/e1395b4e59da4456a52a2a77f7948b79.png"
+                                    alt="coder's journey blog image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}"
+                                    alt="coder's journey blog image">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
