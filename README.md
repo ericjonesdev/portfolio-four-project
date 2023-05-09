@@ -335,7 +335,7 @@ The Epic, User Stories and Kanban board can be accessed here:
     validating this version of the html using the W3C validator (link shown above).
 
   - Validation Results:
-    - [Link to Django documentation](./documentation/Validation_index_dot_html.pdf)
+    - [Homepage](./documentation/Validation_index_dot_html.pdf)
     - Register
     - Login
     - Logout
