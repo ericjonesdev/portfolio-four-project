@@ -79,42 +79,46 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            {{user.username}}
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                            <li>
-                                <a class="dropdown-item active" href="{% url 'user_profile' user_pk=user.pk %}">
-                                    @{{ user.username}}
-                                </a><br>
+                    <li class="nav-item dropdown">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                {{user.username}}
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li>
+                                    <a class="dropdown-item active" href="{% url 'user_profile' user_pk=user.pk %}">
+                                        @{{ user.username}}
+                                    </a><br>
 
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="{% url 'update_profile' username=user.username %}">Update
-                                    Profile</a></li>
-                            <li><a class="dropdown-item" href="{% url 'delete_profile' user.id %}">Delete Profile</a>
-                            </li>
-                            <li><a class="dropdown-item" href="{% url 'create_post' %}">Create Post</a></li>
-                            <li><a class="dropdown-item" href="{% url 'post_list' %}">Posts</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
-                        </ul>
-                    </div>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="{% url 'update_profile' username=user.username %}">Update
+                                        Profile</a></li>
+                                <li><a class="dropdown-item" href="{% url 'delete_profile' user.id %}">Delete
+                                        Profile</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'create_post' %}">Create Post</a></li>
+                                <li><a class="dropdown-item" href="{% url 'post_list' %}">Posts</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                        </div>
+                    </li>
+                </ul>
 
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    {% endif %}
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                </li>
+                {% endif %}
                 </ul>
                 <span class="navbar-text text-muted">
                     a journey into software development
