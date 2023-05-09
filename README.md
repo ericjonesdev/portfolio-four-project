@@ -339,7 +339,7 @@ The Epic, User Stories and Kanban board can be accessed here:
     - <a href="documentation/signup.pdf">Register</a>
     - <a href="documentation/login.pdf">Login</a>
     - <a href="documentation/logout.pdf">Logout</a>
-    - Profile
+    - <a href="documentation/profile.pdf">Profile</a>
     - Post List
     - Edit Profile
     - <a href="documentation/AboutUs.pdf">About Us</a>
