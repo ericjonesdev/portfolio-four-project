@@ -348,7 +348,7 @@ The Epic, User Stories and Kanban board can be accessed here:
 - <a href="<https://jigsaw.w3.org/css-validator/">CSS Validator</a>
 
   - Validation Results
-    - PDF Results
+    - <a href="documentation/W3C CSS Validator results for https __a-coders-journey.herokuapp.com_ (CSS level 3 + SVG)">PDF Results</a>
 
 - Python Validation was performed using the command: python3 -m flake8.
   - Python Validation Results
