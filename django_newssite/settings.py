@@ -58,7 +58,6 @@ INSTALLED_APPS = [
     'blog_site',
 ]
 
-
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
@@ -103,7 +102,6 @@ SESSION_COOKIE_SAMESITE = 'None'
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -116,9 +114,8 @@ if (development == 'True'):
     }
 else:
     DATABASES = {
-            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-        }
-
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
