@@ -335,7 +335,7 @@ The Epic, User Stories and Kanban board can be accessed here:
     validating this version of the html using the W3C validator (link shown above).
 
   - Validation Results:
-    - [Homepage](./documentation/Validation_index_dot_html.pdf)
+    - <a href="https://github.com/ericjonesdev/portfolio-four-project/blob/main/documentation/Validation_index_dot_html">HomePage</a>
     - Register
     - Login
     - Logout
