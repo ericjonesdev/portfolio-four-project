@@ -109,16 +109,15 @@
                             </ul>
                         </div>
                     </li>
-                </ul>
 
-                {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                </li>
-                {% endif %}
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
                 </ul>
                 <span class="navbar-text text-muted">
                     a journey into software development
