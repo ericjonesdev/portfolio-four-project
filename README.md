@@ -48,13 +48,8 @@ Therefore I Blog Code Institute Walkthrough.
   <details>
   <summary>User Stories:</summary>
 
-  - US201: Account Registration
-    - As a Site User I can register an account so that I can be able to log in and manage my account settings
-  - US202: Login and Logout
-    - As As a Site user / Admin I can Log in to the site so that I can gain access to my profile and functionalities
-  - US203: Profile Page Creation
-    - As a Site User I can create my own user profile page so that I can create a short description/bio to showcase to other Site Users
-
+  - US201: Site Navigations
+    - As a Site User I can understand site navigation so that I can easily navigate the site
   </details>
 
 - EPIC 03: Posts and Comments
