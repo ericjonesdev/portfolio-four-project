@@ -20,7 +20,7 @@ User = get_user_model()
 
 class UserProfileView(DetailView):
     '''
-    maps UserProfileView to the urls.py and html template 
+    maps UserProfileView to the urls.py and html template
     '''
     model = User
     template_name = 'user_profile.html'
@@ -32,7 +32,7 @@ class UserProfileView(DetailView):
 class PostList(generic.ListView):
     '''
     uses post model to filter post by those published and displays them
-    on the homepage 
+    on the homepage
     '''
     model = Post
     queryset = Post.objects.filter(status='Published').order_by('-created_on')
@@ -42,8 +42,9 @@ class PostList(generic.ListView):
 
 class PostDetail(View):
     '''
-    defines a Django View to display a blog post with comments and handles adding new comments to the post.
-    adds logic to filter if user is valid and pulls new comment information to add to the post.
+    defines a Django View to display a blog post with comments and handles
+    adding new comments to the post. adds logic to filter if user is valid
+    and pulls new comment information to add to the post.
     '''
 
     def get(self, request, slug, *args, **kwargs):
@@ -117,10 +118,11 @@ class PostLike(View):
 class UserProfiileDetailView(LoginRequiredMixin, UserPassesTestMixin,
                              DetailView):
     '''
-    defines a detail view for user profiles, requiring login and user ownership via the
-    LoginRequiredMixin UserPassesTestMixin. It gets the user object based on the URL 
-    parameter user_pk, fetches the corresponding UserProfiile object and adds it to the 
-    context for rendering the user_profile.html template.    
+    defines a detail view for user profiles, requiring login and user
+    ownership via the LoginRequiredMixin UserPassesTestMixin. It gets the user
+    object based on the URL parameter user_pk, fetches the corresponding
+    UserProfiile object and adds it to the context for rendering the
+    user_profile.html template.
     '''
     model = User
     template_name = 'user_profile.html'
@@ -144,8 +146,8 @@ class UserProfiileDetailView(LoginRequiredMixin, UserPassesTestMixin,
 class UserProfiileUpdateView(LoginRequiredMixin, UserPassesTestMixin,
                              UpdateView):
     '''
-    uses the UserProfiile model to provide the editable fields to the user profile view.
-    ensures that the user is the currently logged in user.
+    uses the UserProfiile model to provide the editable fields to the user
+    profile view. ensures that the user is the currently logged in user.
     '''
     model = UserProfiile
     template_name = 'update_profile.html'
@@ -189,7 +191,7 @@ class UserProfiileDeleteView(SuccessMessageMixin, generic.DeleteView):
 class UserBlogPostCreateView(CreateView):
     '''
     uses the Post model and PostForm classes to allow a logged in user to
-    create a new post. Upon successful completion of a post, the user is then 
+    create a new post. Upon successful completion of a post, the user is then
     taken to their unique listing of published posts.
     '''
     model = Post

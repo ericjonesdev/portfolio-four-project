@@ -11,7 +11,7 @@ from django.contrib.auth.decorators import login_required
 
 class Post(models.Model):
     '''
-    outlines the criteria to be added to a user's visual post   
+    outlines the criteria to be added to a user's visual post
     '''
 
     STATUS_CHOICES = (
@@ -21,15 +21,19 @@ class Post(models.Model):
 
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
+    author = models.ForeignKey(User,
+                               on_delete=models.CASCADE,
+                               related_name="blog_posts")
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
+    status = models.CharField(max_length=10,
+                              choices=STATUS_CHOICES,
+                              default='draft')
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-    
+
     class Meta:
         ordering = ['-created_on']
 
@@ -44,7 +48,9 @@ class Comment(models.Model):
     '''
     sets parameters for what is to be included within a post comment   
     '''
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    post = models.ForeignKey(Post,
+                             on_delete=models.CASCADE,
+                             related_name="comments")
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
@@ -62,12 +68,19 @@ class UserProfiile(models.Model):
     '''
     sets parameters for the user profile   
     '''
-    user = models.OneToOneField(User, on_delete=models.CASCADE,)
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+    )
     profile_image = models.ImageField(upload_to="profile/", blank=True)
     first_name = models.TextField(null=True, blank=True)
     last_name = models.TextField(null=True, blank=True)
     bio = models.TextField(null=True, blank=True)
-    dob = models.DateField(help_text='date form:YYYY-MM-DD', blank=True, null=True,)
+    dob = models.DateField(
+        help_text='date form:YYYY-MM-DD',
+        blank=True,
+        null=True,
+    )
     location = models.CharField(max_length=50, null=True, blank=True)
     github = models.TextField(null=True, blank=True)
     website = models.URLField(null=True, blank=True)
