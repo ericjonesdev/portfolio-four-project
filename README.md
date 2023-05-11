@@ -345,9 +345,9 @@ The Epic, User Stories and Kanban board can be accessed here:
   - Validation Results
     - <a href="documentation/W3C CSS Validator results for https __a-coders-journey.herokuapp.com_ (CSS level 3 + SVG)">PDF Results</a>
 
-- Python Validation was performed using the command: python3 -m flake8.
+- Python Validation was performed using the command: python3 -m flake8. No serious errors were reported.
   - Python Validation Results
-    - <a href="">Flake8 Results</a>
+    - <a href="documentation/Flake8 Results.pdf">Flake8 Results</a>
 
 ## Manual Testing Test Cases and Results
 
@@ -359,6 +359,7 @@ The Epic, User Stories and Kanban board can be accessed here:
 - X_FRAME_SETTINGS known to cause errors with how Summernot displays
   - The user post widget doesn't properly display the WYSIWYG editor
   - <a href="https://ui.dev/amiresponsive/">amiresponsive</a> website does not display live site due to cookie settings
+    in settings.py
 
 ## Deployment
 
