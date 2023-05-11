@@ -62,7 +62,7 @@ Therefore I Blog Code Institute Walkthrough.
     - As a Site User I can leave comments on a post so that I can be involved in the conversation
   - US303: Like / Unlike a Post
     - As a Site User I can like or unlike a post so that I can interact with the content
-  - US304: Like / Create Drafts
+  - US304: Create Drafts
     - As a Site User & Site Admin I can create draft posts so that I can finish writing the content later
   - US305: Like / View Post Likes
     - As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral
