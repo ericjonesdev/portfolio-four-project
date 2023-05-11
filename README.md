@@ -21,7 +21,42 @@ Therefore I Blog Code Institute Walkthrough.
 
 ## Index - Table of Contents
 
-< table of contents >
+- [A Coder's Journey - A Journey Into Software Development](#a-coders-journey---a-journey-into-software-development)
+  - [Index - Table of Contents](#index---table-of-contents)
+    - [User Experience (UX)](#user-experience-ux)
+      - [User Stories:](#user-stories)
+    - [Features](#features)
+    - [Existing Features](#existing-features)
+      - [Fig 01-A Desktop example](#fig-01-a-desktop-example)
+      - [Fig 01-B Mobile example](#fig-01-b-mobile-example)
+      - [Fig 02-A-User Icon upon authentication (signup) to site](#fig-02-a-user-icon-upon-authentication-signup-to-site)
+      - [Fig 03-A-Site Home Page](#fig-03-a-site-home-page)
+      - [Fig 04-A-List of Blog Posts](#fig-04-a-list-of-blog-posts)
+      - [Fig 05-A-Create Post View](#fig-05-a-create-post-view)
+      - [Fig 06-A-Create Profile View](#fig-06-a-create-profile-view)
+      - [Fig 07-A-Edit Profile](#fig-07-a-edit-profile)
+      - [Fig 08-A-Comments and Likes.](#fig-08-a-comments-and-likes)
+      - [Fig 09-A-Options for Authenticated Users.](#fig-09-a-options-for-authenticated-users)
+      - [Fig 10-A-Site Administration Page](#fig-10-a-site-administration-page)
+      - [Fig 11-A-About Us Page](#fig-11-a-about-us-page)
+      - [Fig 12-A-Footer](#fig-12-a-footer)
+  - [Design](#design)
+    - [Methodology](#methodology)
+  - [Planning](#planning)
+  - [Technologies Used](#technologies-used)
+  - [Frameworks, Libraries \& Programs Used](#frameworks-libraries--programs-used)
+  - [Testing](#testing)
+    - [Validator Testing](#validator-testing)
+  - [Manual Testing Test Cases and Results](#manual-testing-test-cases-and-results)
+  - [Known Bugs](#known-bugs)
+  - [Deployment](#deployment)
+  - [Credits](#credits)
+    - [Code](#code)
+    - [Coding, Troubleshooting and Inspiration](#coding-troubleshooting-and-inspiration)
+  - [Media](#media)
+  - [Acknowledgments](#acknowledgments)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ### User Experience (UX)
 
