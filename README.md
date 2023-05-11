@@ -50,7 +50,7 @@ Therefore I Blog Code Institute Walkthrough.
 
   - US201: Site Navigations
     - As a Site User I can understand site navigation so that I can easily navigate the site
-  </details>
+    </details>
 
 - EPIC 03: Posts and Comments
   <details>
@@ -347,6 +347,11 @@ The Epic, User Stories and Kanban board can be accessed here:
 
 - Python Validation was performed using the command: python3 -m flake8.
   - Python Validation Results
+
+## Manual Testing Test Cases and Results
+
+- The link below details the test cases that were used, the results, and a cross-reference to the Feature ID that each test case exercised (click link to open pdf). The test cases are primarily based on the User Story acceptance criteria that were used to test iterations of the code during development.
+  - <a href="">Manual Testing Test Cases and Results</a>
 
 ## Known Bugs
 
