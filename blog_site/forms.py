@@ -5,27 +5,32 @@ from django_summernote.widgets import SummernoteWidget
 
 class CommentForm(forms.ModelForm):
     '''
-    sets the model parameter for the comment form field    
+    sets the model parameter for the comment form field  
     '''
+
     class Meta:
         model = Comment
-        fields = ('body',)
-        
+        fields = ('body', )
+
 
 class UserProfileForm(forms.ModelForm):
     '''
-    sets the parameters for the user profile form view   
+    sets the parameters for the user profile form view
     '''
+
     class Meta:
         model = UserProfiile
-        fields = ('profile_image', 'first_name', 'last_name', 'bio', 'dob', 'location', 'github', 'website', 'twitter', 'occupation')
+        fields = ('profile_image', 'first_name', 'last_name', 'bio', 'dob',
+                  'location', 'github', 'website', 'twitter', 'occupation')
 
 
 class PostForm(forms.ModelForm):
     '''
     sets the parameters for the user profile form view   
     '''
-    status = forms.ChoiceField(choices=(('Draft', 'Draft'), ('Published', 'Published')), widget=forms.RadioSelect())
+    status = forms.ChoiceField(choices=(('Draft', 'Draft'), ('Published',
+                                                             'Published')),
+                               widget=forms.RadioSelect())
 
     class Meta:
         '''
@@ -39,4 +44,3 @@ class PostForm(forms.ModelForm):
             'content': SummernoteWidget(attrs={'class': 'form-control'}),
             'status': forms.Select(attrs={'class': 'form-control'}),
         }
-

@@ -351,7 +351,7 @@ The Epic, User Stories and Kanban board can be accessed here:
 ## Manual Testing Test Cases and Results
 
 - The link below details the test cases that were used, the results, and a cross-reference to the Feature ID that each test case exercised (click link to open pdf). The test cases are primarily based on the User Story acceptance criteria that were used to test iterations of the code during development.
-  - <a href="">Manual Testing Test Cases and Results</a>
+  - <a href="documentation/Manual Testing - Test Cases And Results - Sheet1-1.pdf">Manual Testing Test Cases and Results</a>
 
 ## Known Bugs
 
