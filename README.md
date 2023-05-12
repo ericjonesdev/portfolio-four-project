@@ -415,6 +415,8 @@ Detailed below are instructions on how to clone this project repository and the 
         - git add filenames (or "." to add all changed files)
         - git commit -m "text message describing changes"
         - git push
+      - Any changes pushed to the master branch will take effect on the live project once the application is re-deployed from Heroku
+      - Be careful not to upload DEBUG=True in the settings.py file to GitHub - this setting should only be used locally.
     </details>
 
      <details>
