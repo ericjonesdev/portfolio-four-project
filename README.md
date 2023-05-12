@@ -331,9 +331,9 @@ The Epic, User Stories and Kanban board can be accessed here:
 
 ## Technologies Used
 
-- HTML5
-- CSS3
-- Python
+- <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a>
+- <a href="https://en.wikipedia.org/wiki/CSS">CSS3</a>
+- <a href="https://www.python.org/">Python</a>
 
 ## Frameworks, Libraries & Programs Used
 
