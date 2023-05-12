@@ -255,8 +255,8 @@ media platforms, such as Facebook, Twitter, Instagram and Youtube.
 
 - How these features support the user stories
 
-  In the User Experience (UX) section of this readme there are 16 user stories
-  split between 4 Epics. An additional user story (17 - Social Login) is not included
+  In the User Experience (UX) section of this readme there are 17 user stories
+  split between 4 Epics. An additional user story (18 - Social Login) is not included
   within this.
 
 - Features which could be impletemented in the future
