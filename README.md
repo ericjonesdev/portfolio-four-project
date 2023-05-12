@@ -50,6 +50,7 @@ Therefore I Blog Code Institute Walkthrough.
   - [Manual Testing Test Cases and Results](#manual-testing-test-cases-and-results)
   - [Known Bugs](#known-bugs)
   - [Deployment](#deployment)
+  - [](#)
   - [Credits](#credits)
     - [Code](#code)
     - [Coding, Troubleshooting and Inspiration](#coding-troubleshooting-and-inspiration)
@@ -334,7 +335,6 @@ The Epic, User Stories and Kanban board can be accessed here:
 
 - HTML5
 - CSS3
-- Jquery
 - Python
 
 ## Frameworks, Libraries & Programs Used
@@ -398,8 +398,20 @@ The Epic, User Stories and Kanban board can be accessed here:
 
 ## Deployment
 
+Detailed below are instructions on how to clone this project repository and the steps to configure and deploy the application.
+
+1. How to Clone the Repository
+2. Create Application and Postgres DB on Heroku
+3. Connect the Heroku app to the GitHub repository
+
 - Steps for deployment:
-  - Clone <a href="<https://github.com/ericjonesdev/portfolio-four-project/">GitHub> repository</a> to CodeAnywhere virtual environment
+
+<details>
+<summary>How to clone a repository</summary>
+  - Clone <a href="<https://github.com/ericjonesdev/portfolio-four-project/">GitHub> repository</a> to CodeAnywhere 
+</details>
+  - 
+  - virtual environment
   - Create accounts with ElephantSQL and Heroku
   - Configure Heruko to host the project and ElephantSQL to host the database
   - Configure Heroku for automatic deployment from Github
