@@ -50,7 +50,6 @@ Therefore I Blog Code Institute Walkthrough.
   - [Manual Testing Test Cases and Results](#manual-testing-test-cases-and-results)
   - [Known Bugs](#known-bugs)
   - [Deployment](#deployment)
-  - [](#)
   - [Credits](#credits)
     - [Code](#code)
     - [Coding, Troubleshooting and Inspiration](#coding-troubleshooting-and-inspiration)
@@ -406,10 +405,11 @@ Detailed below are instructions on how to clone this project repository and the 
 
 - Steps for deployment:
 
-<details>
-<summary>How to clone a repository</summary>
-  - Clone <a href="<https://github.com/ericjonesdev/portfolio-four-project/">GitHub> repository</a> to CodeAnywhere 
-</details>
+    <details>
+    <summary>How to clone a repository</summary>
+    - Clone <a href="<https://github.com/ericjonesdev/portfolio-four-project/">portfolio-project-four repo</a> to CodeAnywhere(CA) via opening an account on code anywhere, clicking 'new workspace' within the CodeAnywhere menu, copying the github repository URL and pasting it in to the CA text box for 'Create from your project repository'.
+    Click the 'Create' button at the bottom of the screen and await completion of the new workspace. 
+    </details>
   - 
   - virtual environment
   - Create accounts with ElephantSQL and Heroku
