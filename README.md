@@ -422,22 +422,23 @@ Detailed below are instructions on how to clone this project repository and the 
 
     <details>
     <summary>Create Application and Postgres DB on elephantSQL</summary>
-    - Log in to Heroku at https://heroku.com - create an account if needed.
-    - From the Heroku dashboard, click the Create new app button. For a new account an icon will be visible on screen to allow you to Create an app, otherwise a link to this function is located under the New dropdown menu at the top right of the screen.
-    - On the Create New App page, enter a unique name for the application and select region. Then click Create app.
-    - Next, click on Settings on the Application Configuration page and click on the "Reveal Config Vars" button
-      - ensure that the proper environment variables pertaining to your specific project build are entered and saved
-      - create an account on elephantSQL, create a new database and copy database url to your env.py and heroku config vars
-    - Add a new Config Var (heroku)called DISABLE_COLLECTSTATIC and assign it a value of 1.
-    - Add a new Config Var called SECRET_KEY and assign it a value - any random string of letters, digits and symbols.
-    - The settings.py file should be updated to use the DATABASE_URL and SECRET_KEY environment variable values as follows :
-      - DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
-      - SECRET_KEY = os.environ.get('SECRET_KEY')
-    - In Gitpod, in the project terminal window, to initialize the data model in the postgres database, run the command : python3 manage.py migrate
-    - Set up and admin user in the postgres db using the command : python3 manage.py createsuperuser
-    - Set DEBUG flag to False in settings.py
-    - Commit and push any local changes to GitHub.
-    - In order to be able to run the application on localhost, add SECRECT_KEY and DATABASE_URL and their values to env.py
+
+  - Log in to Heroku at https://heroku.com - create an account if needed.
+  - From the Heroku dashboard, click the Create new app button. For a new account an icon will be visible on screen to allow you to Create an app, otherwise a link to this function is located under the New dropdown menu at the top right of the screen.
+  - On the Create New App page, enter a unique name for the application and select region. Then click Create app.
+  - Next, click on Settings on the Application Configuration page and click on the "Reveal Config Vars" button
+    - ensure that the proper environment variables pertaining to your specific project build are entered and saved
+    - create an account on elephantSQL, create a new database and copy database url to your env.py and heroku config vars
+  - Add a new Config Var (heroku)called DISABLE_COLLECTSTATIC and assign it a value of 1.
+  - Add a new Config Var called SECRET_KEY and assign it a value - any random string of letters, digits and symbols.
+  - The settings.py file should be updated to use the DATABASE_URL and SECRET_KEY environment variable values as follows :
+    - DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+    - SECRET_KEY = os.environ.get('SECRET_KEY')
+  - In Gitpod, in the project terminal window, to initialize the data model in the postgres database, run the command : python3 manage.py migrate
+  - Set up and admin user in the postgres db using the command : python3 manage.py createsuperuser
+  - Set DEBUG flag to False in settings.py
+  - Commit and push any local changes to GitHub.
+  - In order to be able to run the application on localhost, add SECRECT_KEY and DATABASE_URL and their values to env.py
     </details>
 
 - Create accounts with ElephantSQL and Heroku
