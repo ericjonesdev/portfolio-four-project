@@ -462,7 +462,7 @@ Detailed below are instructions on how to clone this project repository and the 
 
 ### Coding, Troubleshooting and Inspiration
 
-- The following list of links were used as either examples upon which to build further
+- The following list of links were used as either examples upon which to further build the models and views
   this project, inspiration and troubleshooting various issues that arose during the
   process:
 
@@ -498,6 +498,11 @@ Django / Python code examples:<br>
 <https://stackoverflow.com/questions/5531258/example-of-django-class-based-deleteview>
 <https://stackoverflow.com/questions/862522/django-populate-user-id-when-saving-a-model/15540149#15540149>
 <https://docs.djangoproject.com/en/3.0/ref/class-based-views/mixins-editing/#django.views.generic.edit.ModelFormMixin.form_valid>
+
+example for user, form and views within blog_site:
+<https://github.com/yashpatel-py/django_blog_youtube/blob/master/main/models.py>
+<https://github.com/yashpatel-py/django_blog_youtube/blob/master/main/forms.py>
+<https://youtu.be/D_KyndgwD1o>
 
 Markdown:<br>
 <https://www.digitalocean.com/community/tutorials/markdown-markdown-images>
