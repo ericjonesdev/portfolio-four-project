@@ -80,12 +80,11 @@ Therefore I Blog Code Institute Walkthrough.
   </details>
 
 - EPIC 02: Viewing and Navigation
-  <details>
-  <summary>User Stories:</summary>
+    <details>
+    <summary>User Stories:</summary>
 
-  - US201: Site Navigations
-    - As a Site User I can understand site navigation so that I can easily navigate the site
-    </details>
+  - US201: Site Navigations - As a Site User I can understand site navigation so that I can easily navigate the site
+  </details>
 
 - EPIC 03: Posts and Comments
   <details>
