@@ -407,14 +407,14 @@ Detailed below are instructions on how to clone this project repository and the 
 
     <details>
     <summary>How to clone a repository</summary>
-    - Clone <a href="<https://github.com/ericjonesdev/portfolio-four-project/">portfolio-four-project repo</a> to CodeAnywhere(CA) via opening an account on code anywhere, clicking 'new workspace' within the CodeAnywhere menu, copying the github repository URL and pasting it in to the CA text box for 'Create from your project repository'.
-    Click the 'Create' button at the bottom of the screen and await completion of the new workspace.
-      - To install the packages required by the application use the command : pip install -r requirements.txt
-      - When developing and running the application locally set DEBUG=True in the settings.py file
-      - Changes made to the local clone can be pushed back to the repository using the following commands :
-        - git add filenames (or "." to add all changed files)
-        - git commit -m "text message describing changes"
-        - git push
+      - Clone <a href="<https://github.com/ericjonesdev/portfolio-four-project/">portfolio-four-project repo</a> to CodeAnywhere(CA) via opening an account on code anywhere, clicking 'new workspace' within the CodeAnywhere menu, copying the github repository URL and pasting it in to the CA text box for 'Create from your project repository'.
+      Click the 'Create' button at the bottom of the screen and await completion of the new workspace.
+        - To install the packages required by the application use the command : pip install -r requirements.txt
+        - When developing and running the application locally set DEBUG=True in the settings.py file
+        - Changes made to the local clone can be pushed back to the repository using the following commands:
+          - git add filenames (or "." to add all changed files)
+          - git commit -m "text message describing changes"
+          - git push
       - Any changes pushed to the master branch will take effect on the live project once the application is re-deployed from Heroku
       - Be careful not to upload DEBUG=True in the settings.py file to GitHub - this setting should only be used locally.
     </details>
