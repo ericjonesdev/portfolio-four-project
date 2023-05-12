@@ -415,14 +415,15 @@ Detailed below are instructions on how to clone this project repository and the 
       - git add filenames (or "." to add all changed files)
       - git commit -m "text message describing changes"
       - git push
-
     </details>
 
      <details>
     <summary>Create Application and Postgres DB on Heroku</summary>
-    - Clone <a href="<https://github.com/ericjonesdev/portfolio-four-project/">portfolio-four-project repo</a> to CodeAnywhere(CA) via opening an account on code anywhere, clicking 'new workspace' within the CodeAnywhere menu, copying the github repository URL and pasting it in to the CA text box for 'Create from your project repository'.
+    - Clone <a href="<https://github.com/ericjonesdev/portfolio-four-project/">portfolio-four-project repo</a> to CodeAnywhere(CA) via opening an account on code anywhere, clicking 'new workspace' within the CodeAnywhere menu, copying the github repository URL and pasting it in to the CA text box for 'Create
+     from your project repository'.
     Click the 'Create' button at the bottom of the screen and await completion of the new workspace.
-    </details>
+    </deta
+    
   - Create accounts with ElephantSQL and Heroku
   - Configure Heruko to host the project and ElephantSQL to host the database
   - Configure Heroku for automatic deployment from Github
