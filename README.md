@@ -441,11 +441,15 @@ Detailed below are instructions on how to clone this project repository and the 
     - In order to be able to run the application on localhost, add SECRECT_KEY and DATABASE_URL and their values to env.py
     </details>
 
-- Create accounts with ElephantSQL and Heroku
-- Configure Heruko to host the project and ElephantSQL to host the database
-- Configure Heroku for automatic deployment from Github
-- Perform migrations in Django, push the code to the repository main branch
-- Verify Site is up
+    <details>
+    <summary>Connect the Heroku app to the GitHub repository</summary>
+
+    - Go to the Application Configuration page for the application on Heroku and click on the Deploy tab.
+    - Select GitHub as the Deployment Method and if prompted, confirm that you want to connect to GitHub. Enter the name of the github repository (the one used for this project is (<https://github.com/ericjonesdev/portfolio-four-project/>) and click on Connect to link up the Heroku app to the GitHub repository code.
+    - Scroll down the page and choose to either Automatically Deploy each time changes are pushed to GitHub, or Manually deploy - for this project Manual Deploy was selected.
+    - The application can be run from the Application Configuration page by clicking on the Open App button.
+    - The live link for this project is (https://a-coders-journey.herokuapp.com/)
+    </details>
 
 ## Credits
 
